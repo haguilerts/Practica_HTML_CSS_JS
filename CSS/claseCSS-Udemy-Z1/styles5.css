@@ -1,0 +1,39 @@
+﻿/*
+   minmax(): es una funcion 
+    Recibe dos parámetros (valores) para establecer el mínimo y el máximo que pueden tener los items.
+    grid-template-columns: repeat(2, minmax(100px, 1fr));
+
+    min-content: mímimo necesario en función del contenido
+    max-content: máximo necesario en función del contenido
+
+    auto-fill: Crea tantos grid-items vacios como quepan en el viewport respetando las medidas.
+    auto-fit: Elimina los grid-items vacios que no se estén ocupando.
+*/
+
+body {
+    height: 100vh;
+    color: #eee;
+    font-family: sans-serif;
+    background-image: radial-gradient(circle, #b94bf8, #3a1957);
+    background-repeat: no-repeat;
+}
+
+.grid-container {
+    display: grid;
+    grid-gap: 2px;
+	/* grid-template-columns: repeat(3, minmax(70px, 1fr));/* asigna a 3 columnas con un rango min:70px y max:maximo de la pantalla*/
+   	/* grid-template-columns: repeat(3, minmax(max-content, 1fr));/* max-content: lo q haces es el contenido el del bloque se mantenga en la misma linea */
+   	/* grid-template-columns: repeat(3, minmax(min-content, 1fr));/* min-content: lo q haces es el contenido el del bloque llegue al minimo espesor y las palabras se vea de forma vertical uno abajo del otro */
+    grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));/*auto-fill: hace q su tamanio no se extienda manteniedo su tamanio.y crea espacio de bloques y cuando se contrae los bloques llega a us tamanio min de forma vertical*/
+    grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));/* auto-fit: hace q tamanio cresca al maximo extendiednosce  */
+	
+}
+
+.grid-item {
+    border: .5px solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    padding: 1rem;
+}

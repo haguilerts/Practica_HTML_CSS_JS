@@ -1,0 +1,106 @@
+/*
+
+Structural
+    :root (root > thml)- Representa la raiz del documento (html) usando una pseudoclase tenemos más especificidad que si usáramos html
+
+    :empty - Esta pseudoclase se aplica para los elementos vacios, es decir, etiquetas que no tienen contenido
+    
+    -child
+        :first-child - Selecciona al primer hijo (independientemente del tipo de etiqueta)
+        :last-child - Selecciona al ultimo hijo (independientemente del tipo de etiqueta)
+
+        :nth-child(n) - Selecciona al hijo n(independientemente del tipo de etiqueta)
+        :nth-last-child(n) Selecciona al hijo n empezando a contar desde el último (independientemente del tipo de etiqueta)
+        :only-child Selecciona al hijo unico(independientemente del tipo de etiqueta)
+    
+    -type
+        :first-of-type
+        :last-of-type
+        :nth-of-type()
+        :nth-last-of-type()
+        :only-of-type
+
+    Valores posibles:
+        odd - Impares
+        even - Pares
+        numeros enteros - 2,3,4...
+        equaciones (1n,3n,4n+1,n+4,...)
+            n es un multiplicador va de 0 hasta que se quede sin elementos
+    
+Negation
+    :not() - Selecciona al elemento que no cumpla la condición, se puede poner cualquier selector salvo otro :not
+*/
+
+   /* .paragraph{
+        padding: .5em;
+        background:lightblue;
+    }
+    .paragraph:empty{ /*esto se aplica a las etiquetas q no tiene contenido,
+                         es para sacar los elementos vacios */
+       /* padding: 0;*/
+  /*      all:unset;/*esta propiedad resetea las propiedades exepto direction y unnitoldien*/
+ /*   } 
+    /*********************************************************/
+ /*    .paragraph:first-child { /*al PRIMER hijo(parrafo) del container se le aplica esto*/
+ /*       background: red;
+    }
+
+    .paragraph:last-child {/*al ULTIMO hijo(parrafo) del container se le aplica esto*/
+/*      background: blue;
+    } 
+
+     .paragraph:nth-child(odd) {
+    /*selecciona a los valores posbles (par"ever", impar"odd", enteros"2" o ecuaciones"n+1") */
+/*        background: lightcoral;
+    } 
+
+     .paragraph:nth-child(even) {
+    /*selecciona a los valores posbles (par"ever", impar"odd", enteros"2" o ecuaciones"n+1") */
+/*        background: cyan;
+    } 
+
+/*            cuando llega al parrafo vacio comienza de nuevo de cero   */
+/*     .paragraph:nth-child(3) { /*selecciona solo el 3*/
+/*        background: blue;
+    } 
+
+    .paragraph:nth-child(3n) {/*selecciona multiplo de 3*/
+        /* n va (0 asta 3n) 0 ,3 ,6 ,9*/
+        
+/*        background: yellow;
+    } 
+
+     .paragraph:nth-child(3n + 1) {
+        background: blue;
+    } */
+
+    /* .paragraph:nth-child(n + 4) {
+        background: lightcoral;
+    }
+     */
+
+   /*  .paragraph:nth-last-child(2) {/*aca cambia el sentido de conteo 
+        va del fina hacia el comeizo*/
+   /*     background: lightcoral;
+    } 
+
+    /* .paragraph:only-child{/*solo se aplica para hijo unico, en este caso hay muchos */
+    /*    background: lightseagreen;
+    } */
+   /* .paragraph:nth-of-type(3){/* selecciona la fina elejida de ambas etiquetas*/
+  /*           background: lightseagreen;
+    }*/
+    /* .paragraph:first-of-type{/*selecciona el primer elementa q encuntras */
+   /*     background: red;
+    } */
+    
+   /* .paragraph:not(div) {/*seleciona o aplica a todos, menos el elemnto elegido entre (), en este caso el div*/
+   /*     background: green;
+    }*/
+    /* .paragraph:not(p) {/*seleciona o aplica a todos, menos el elemnto elegido entre (), en este caso al p*/
+   /*     background: green;
+    }*/
+   /* .paragraph:not(.first) {/*seleciona o aplica a todos, menos el elemnto elegido entre ()*/
+   /*     background: green;
+    }
+    

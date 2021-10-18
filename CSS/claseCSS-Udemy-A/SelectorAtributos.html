@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Mi primera web</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="../bootstrap-5.0.0-beta1-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../myEstilo.css">
+
+    <!-- Insertar CSS en la cabecera, no recomendable salvo que tengamos una sóla página o para pruebas 
+   1) <style>
+        p{
+          color: red;
+        }
+      </style> 
+
+    2)  Estilo en línea, no recomendado para estilos estáticos, sólo para estilos que se tienen que calcular en tiempo 
+        real, con JavaScript por ejemlo.
+       <h1 style="color:blue">Soy un encabezado principal</h1>
+
+    3)  Trayendo una hoja de estilos externa, la forma más recomendada para poder reutlizar el código
+         <link rel="stylesheet" href="styles-dist.css">
+
+    4)   Importando con la regla @import url(), esta forma no se recomienda para evitar posibles fallos. 
+         <style>  @import url("styles-dist.css");   </style>
+-->
+    <link rel="stylesheet" href="estilo.css">
+    <style>
+        [href] {
+            color: rgb(28, 207, 28);
+            font-weight: bold;
+        }
+        
+        [href="#"] {
+            color: red;
+        }
+        
+        [class~="verde"] {
+            color: rgb(2, 221, 2);
+            font-weight: bold;
+        }
+        
+        [class|="blue"] {
+            color: blue;
+        }
+        /* Empieza con rojo: ABCrojo */
+        
+        [class$="rojo"] {
+            color: white;
+            background-color: rgba(255, 0, 0, 0.986);
+            font-weight: bold;
+            font-style: italic;
+        }
+        /* contiene rojo: ABCrojoDEF */
+        
+        [class*="rojo"] {
+            border: 3px solid rgba(1, 1, 247, 0.507);
+        }
+        /* Termina con rojo: rojoABC */
+        
+        [class^="rojo"] {
+            color: rgb(146, 255, 4);
+            background-color: rgb(255, 1, 1);
+            font-weight: bold;
+            font-style: oblique;
+        }
+        /*######### Selectores combinadores #########*/
+        
+        h1+h2 {
+            color: red;
+            border: 1px solid red;
+        }
+        
+        h1~h3 {
+            color: yellow;
+            border: 1px solid yellow;
+        }
+        
+        p samp {
+            color: red;
+            border: 1px solid red;
+        }
+        
+        p>span {
+            color: blue;
+            border: 1px solid blue;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="bg-info text-center title">Selector de Atributos</h1>
+
+    <main class="container-fluid">
+        <section class="row">
+            <article class="col-4">Selector <strong>universal</strong> - *</article>
+            <aside class="col">
+                * { font-family: 'Franklin Gothic Medium'; }
+            </aside>
+        </section>
+        <section class="row">
+            <article class="col-4">Selector por <strong>Etiqueta</strong> - NAV </article>
+            <aside class="col text-primary">
+                <nav>nav { color: blue; } </nav>
+            </aside>
+        </section>
+        <section class="row">
+            <article class="col-4">Selector por <strong>class</strong> - P </article>
+            <aside class="col">
+                <p class="p">
+                    .p { color: red; }
+                </p>
+            </aside>
+        </section>
+        <section class="row">
+            <article class="col-4">Selector por <strong>Id</strong> - P </article>
+            <aside class="col">
+                <p id="p">
+                    #p { color: green; }
+                </p>
+            </aside>
+        </section>
+
+        <h2 class="text-center bg-danger text-light">Selectores de atributo []</h2>
+
+        <section class="row">
+            <article class="col-4">Selec.Element <strong> a-[href]</strong> </article>
+            <aside class="col">
+                <a href="">  [href] { color: green; }</a>
+            </aside>
+        </section>
+        <section class="row">
+            <article class="col-4">Selec.Element <strong> a-[href]=#</strong>
+                <small>Seleccionar los elementos que tienen ese atributo y ese valor</small>
+            </article>
+            <aside class="col">
+                <a href="#">  [href="#"] {  color: red;  }</a>
+            </aside>
+        </section>
+
+        <section class="row">
+            <article class="col-4">Selec.Element <strong> b-[class~="verde]</strong>
+                <small>Seleccionar los elementos que tienen ese atributo "al menos ese valor una vez".</small>
+            </article>
+            <aside class="col">
+                <b class="verde"> [class~="verde"] { color: green; }</b>
+
+            </aside>
+        </section>
+        <section class="row">
+            <article class="col-4">Selec.Element <strong>b-[class|="blue"]  </strong>
+                <small>Seleccionar los elementos que tienen ese atributo y exactamente ese valor o empieze por el valor seguido de un guión</small>
+            </article>
+            <aside class="col">
+                <b class="blue">[class|="verde"] { color: blue; }</b>
+            </aside>
+        </section>
+
+        <section class="row">
+            <article class="col-4">Selec.Element <strong>b-[class^="Oscuro_rojo"]  </strong>
+                <small>Seleccionar los elementos que tienen ese atributo y <strong>EMPIESA</strong>  por ese valor</small>
+            </article>
+            <aside class="col">
+                <b class="ABCrojo">[class^="ABCrojo"] { color: white;  }</b>
+            </aside>
+        </section>
+        <section class="row">
+            <article class="col-4">Selec.Element <strong>b-[class*="rojo"]  </strong>
+                <small>Seleccionar los elementos que tienen ese atributo y contengan ese valor </small>
+            </article>
+            <aside class="col">
+                <b class="ABCrojoDFG">[class*="ABCrojoDFG"] { border: 3px solid blue; }</b>
+            </aside>
+        </section>
+        <section class="row">
+            <article class="col-4">Selec.Element <strong>b-[class$="Oscuro_rojo"]  </strong>
+                <small>Seleccionar los elementos que tienen ese atributo y <strong>TERMINA</strong> por ese valor</small>
+            </article>
+            <aside class="col">
+                <b class="rojoABC">[class$="rojoABC"] { color: yellow;  }</b>
+            </aside>
+        </section>
+
+        <h3 class="text-center bg-danger text-light">Selectores combinadores</h3>
+
+        <section class="row">
+            <article class="col-4">Selector Hermano adyacente <strong>h1+h2   </strong>
+                <small>selcciona Subtítulo  <strong>h2</strong> hermano menor de h1. </small>
+            </article>
+            <aside class="col">
+                <h1> h1
+                    <h2> ---h1+h2 </h2>
+                </h1>
+                <h2> h2 </h2>
+            </aside>
+        </section>
+        <section class="row">
+            <article class="col-4">Selector Hermano general <strong>h1~h3   </strong>
+                <small>Selecciona <strong>TODOS los hermanos</strong> que esté por el y <strong>debajo de el</strong> . El estilo se aplica a todos los hermanos hermano menor de h1. </small>
+            </article>
+            <aside class="col">
+                <h1> h1
+                    <h3> ---h1+h2 </h3>
+                </h1>
+                <h3> h2 </h3>
+            </aside>
+        </section>
+        <section class="row">
+            <article class="col-4">Selectores Descendentes <br> <strong>-p <br> --samp</strong>
+                <small> Selecciona <strong>todos los hijos</strong> (QUE ESTEN DENTRO DE CONTENEDOR). El estilo se aplica a todos los hijos  </small>
+            </article>
+            <aside class="col">
+                <P> pppp <br>
+                    <samp class="ms-3"> p samp { color:red;}</samp>
+                </P>
+            </aside>
+        </section>
+        <section class="row">
+            <article class="col-4">Selector de hijo directo <br> <strong>-p <br> --span</strong>
+                <small> Selecciona todos los hijos que sean directos, es decir que no estén dentro de otras etiquetas. El estilo se aplica a todos los hijos </small>
+            </article>
+            <aside class="col">
+                <P>pppp <br>
+                    <span class="ms-3"> p>span { color:blue;}</span> <br>
+                    <span class="ms-3"> p>span { color:blue;}</span>
+                </P>
+            </aside>
+        </section>
+    </main>
+
+
+    <div>
+        <img class="w-100" src="insertar-sintaxis-setectores.png" alt="...">
+        <img class="w-100" src="insertar.png" alt="..">
+    </div>
+
+    <!-- Option 1: Bootstrap, Popper -->
+    <script src="bootstrap-5.0.0-beta1-dist/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.js"></script>
+    <script src="jquery.js"></script>
+</body>
+
+</html>

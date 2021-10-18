@@ -1,0 +1,29 @@
+*{
+	margin: 0;
+}
+body{
+	width: 720px;
+	background-color:black;
+	margin: auto;
+}
+	nav{
+		height: 60px;
+		background-color:yellow;
+	}
+	header{
+		height: 230px;
+		background-color:blue;
+
+	}
+	section{
+		height: 660px;
+		background-color:red;
+	}
+	footer{
+		height: 400px;
+		background-color:green;
+	}
+	aside{
+		height: 150px;
+		background-color:orange;
+	}

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="../bootstrap4.4.1/css/bootstrap.min.css">
+    <meta charset="UTF-8">
+	<title>overflow </title>
+    <style >
+    	
+		.row{
+		  background: yellow;	
+		  padding: 4px;	  
+		} 
+		/*[class^="col"]{
+		  background: cyan;
+		  border:1px solid black;
+		  text-align-last: center;
+		  max-height: auto;
+		} */
+		.caja{
+			height: 15vh;/*vh; viupor = 50%*/
+		}
+		.caja1{
+			height: 150px;
+			width: 150px;			
+		}
+			
+    </style>		
+</head>
+<body >
+	    
+<!--////************* https://unsplash.com/s/photos/paisajes *************************************-->	
+<!--////**************************************************-->
+<div class="container"> <h1>--- overflow --</h1>  </div>
+		<!-- linea(inline): respeta el flujo pero no respeta alto y ancho |
+			 bloque(block): NO respeta el flujo, utiliza toda la linea    | 
+			linea_bloque(inline-block): respeta alto-ancho-flujo          |
+Escondido en todos	.d-none
+Oculto solo en xs	.d-none .d-sm-block
+Oculto solo en sm	.d-sm-none .d-md-block
+Oculto solo en md	.d-md-none .d-lg-block
+Oculto solo en lg	.d-lg-none .d-xl-block
+Oculto solo en xl	.d-xl-none
+Visible en todos	.d-block
+Visible solo en xs	.d-block .d-sm-none
+Visible solo en sm	.d-none .d-sm-block .d-md-none
+Visible solo en md	.d-none .d-md-block .d-lg-none
+Visible solo en lg	.d-none .d-lg-block .d-xl-none
+Visible solo en xl	.d-none .d-xl-block
+		-->	
+	<div class="container">
+		<div class="row ">
+			<div class="col-12 d-block">
+			<div class="col-6 caja bg-primary overflow-auto">
+				<p>Este es un ejemplo del uso de .overflow-auto en un elemento con dimensiones de ancho y alto establecidas. Por diseño, este contenido se desplazará verticalmente.Este es un ejemplo del uso de .overflow-auto en un elemento con dimensiones de ancho y alto establecidas. Por diseño, este contenido se desplazará verticalmente.Este es un ejemplo del uso de .overflow-auto en un elemento con dimensiones de ancho y alto establecidas. Por diseño, este contenido se desplazará verticalmente.</p>
+				
+			</div>
+			<div class="col-6 caja bg-info  overflow-hidden">
+				<p>Este es un ejemplo del uso de .overflow-auto en un elemento con dimensiones de ancho y alto establecidas. Por diseño, este contenido se desplazará verticalmente.Este es un ejemplo del uso de .overflow-auto en un elemento con dimensiones de ancho y alto establecidas. Por diseño, este contenido se desplazará verticalmente.Este es un ejemplo del uso de .overflow-auto en un elemento con dimensiones de ancho y alto establecidas. Por diseño, este contenido se desplazará verticalmente.</p>
+				
+			</div>
+			</div>
+		</div>
+	</div>
+<div class="container"> <h1>--- possition --</h1>  </div>	
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+				<p>Concepto de información. La información está constituida por un grupo de datos ya supervisados y ordenados, que sirven para construir un mensaje basado en un cierto fenómeno o ente. La información permite resolver problemas y tomar decisiones, ya que su aprovechamiento racional es la base del conocimiento.
+				Concepto de información. La información está constituida por un grupo de datos ya supervisados y ordenados, que sirven para construir un mensaje basado en un cierto fenómeno o ente.</p>
+
+				<div class="caja1 bg-success d-inline-block border border-primary rounded-circle position-relative" style="top:50px; right:10px;">posion-relative</div><!--posiciona 0,0 desde donde estaba y los deman respetan su lugar -->
+				<div class="caja1 bg-primary d-inline-block position-absolute" style="right:10%;top:20px;">posision absoluto</div><!--posiciona 0,0 desde donde esta row, los demas no respetan -->
+				<div class="caja1 bg-secondary d-inline-block position-fixed " style="top:0px; left: 0px; height:70px;	width: 70px; ;">position-fixed</div><!--posiciona 0,0 toma donde esta body, los demas no respetan -->
+				<div class="caja1 bg-secondary d-inline-block fixed-top " style=" left: 100px; height:70px;	width: 70px; ;">fixed-top-messenger</div>
+				<div class="caja1 bg-secondary d-inline-block fixed-bottom " style=" left: 100px; height:70px;	width: 70px; ;">fixed-bottom-whatssap</div>
+
+				<div class="caja1 bg-white d-inline-block  position-sticky" style="top:0px; left: 30px;">position-sticky-menu</div><!--posiciona 0,0 en su lugar actual pero cuado la pagina baja se posiona en la parte superiro, srve para menus -->	
+				<div class="caja1 bg-danger d-inline-block  position-sticky" style="top:0px; left: 30px;">position-sticky-menu</div>
+
+				<p>Concepto de información. La información está constituida por un grupo de datos ya supervisados y ordenados, que sirven para construir un mensaje basado en un cierto fenómeno o ente. La información permite resolver problemas y tomar decisiones, ya que su aprovechamiento racional es la base del conocimiento.
+				Concepto de información. La información está constituida por un grupo de datos ya supervisados y ordenados, que sirven para construir un mensaje basado en un cierto fenómeno o ente. La información permite resolver problemas y tomar decisiones, ya que su aprovechamiento racional es la base del conocimiento.
+				Concepto de información. La información está constituida por un grupo de datos ya supervisados y ordenados, que sirven para construir un mensaje basado en un cierto fenómeno o ente. La información permite resolver problemas y tomar decisiones, ya que su aprovechamiento racional es la base del conocimiento.
+				Concepto de información. La información está constituida por un grupo de datos ya supervisados y ordenados, que sirven para construir un mensaje basado en un cierto fenómeno o ente. La información permite resolver problemas y tomar decisiones, ya que su aprovechamiento racional es la base del conocimiento.
+				</p>
+			</div>
+		</div>
+	</div>
+
+<div class="container"> <h1>--- fin --</h1>  </div>
+<!--////**************************************************-->
+
+<script src="../jquery.js"></script>
+<script src="https://unpkg.com/@popperjs/core@2"></script>
+<script src="../bootstrap4.4.1/js/bootstrap.min.js" ></script>
+	
+</body>
+</html>
+<!--
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+				
+			</div>
+		</div>
+	</div>
+  .col- : es para celulares (Estra small) 
+  .col-sm- : es para cel.   (small)
+  .col-md- : es para tables (medium)
+  .col-lg- : es para pc     (large)
+  .col-xl- : es para TV led.(Extra Large)
+(Estra small) < 576px < (small) < 768px < (medium) < 992px < (large) < 12000px< (Extra large) < 
+
+color : primary secondary success danger warning info light
+		dark body muted white black white
+-->

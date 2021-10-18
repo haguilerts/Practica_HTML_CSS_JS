@@ -1,0 +1,88 @@
+/* Display: especifica el tipo de cuadro de representación utilizado para un elemento. 
+        Se toman de los comportamientos de los cambios en las especificaciones HTML
+
+
+Elementos de bloque: son aquellos q los elementos se encuntran separados uno ABAJO del otro;
+Elementos de linea: son aquellos q los elementos se encuntran separados uno ALADO del otro;    
+    
+    -Nos permite definir cómo se comporta una caja.
+    -De forma natural existen elementos en línea y elementos en bloque
+    -Los valores de esta propiedad son:
+        inline: Establece que la caja se comporta como si fuera un elemento en línea.
+            NO admite dimensiones (width y height)
+            Admiten margin y padding pero no afecta al flujo vertical,sólo al horizontal
+        block:  Establece que la caja se comporta como si fuera un elemento en bloque.
+            Admite dimensiones (width y height)
+            Admiten margin y padding y afecta al flujo vertical, sólo al horizontal.
+
+    -inline-block - Se comporta como un elemento en línea pero acepta width y heigth.    
+    -none – Oculta el elemento pero se sigue renderizando.
+
+    ****************************************************************************************
+    -table – Imita el comportamiento de una tabla.Estos elementos se comportan como elementos HTML <table>. Define un cuadro de nivel de bloque
+    -list-item - Imita el comportamiento de una lista.
+
+    CSS3
+    flex – maquetar componentes
+    grid – maquetar layout
+*/
+
+.inline{ /* a los bloques en linea solo se puede aplicar cambios en el HORIZONTAL
+    como margin y madding, en cambio el la vertical no afecta en aboslutosu tamaño
+    pero si aplico paddin-bootom:3em; solo se alargara el color sin ocupar espacio.
+    */    
+    background: blue; /*color */ 
+
+    /*  margin-bottom: 3em; /* no psa nada xqno le afecta a la linea, osea no lo empua al otro bloque.*/
+    /*  padding-bottom: 3em;/**/
+
+    margin-left: 1.5em; /* distacia isquierda */
+    margin-right: 2em;
+    /*si usamos display-block; ho q hace es */
+    display: block ;/*comvieto los elemntos de linea en elementos de bloque */
+      margin-bottom: 3em;/* aca recien le empuja al otro bloque */
+      height: 3em;/*y de paso puedo aumentar el tamanio*/
+      max-width: 1000px; /* maximo alcance de su longitud*/
+      min-width: 500px; /* minimo alcance de su longitud*/
+}
+
+.block{
+    background: yellow;
+    
+    
+   display: inline; /*los elementos en bloque los combiete en elementos de linea con todos sus propiedades*/
+        margin-bottom:  99999em;  /* no funciona */
+        margin-top: 99999em;/*no fuciona*/
+
+        margin-left:1em;
+        margin-right:3em ;
+        padding: 1.5em; /**/
+}
+.inline-block{ /* en principio es una elemnto de bloque */
+    background: red;
+    display: inline-block;/* cambia a linea con las propiedades de bloque.*/
+        height: 2em; /*toma una altura */
+        margin: 4em  3em; /*separacion alto y largo*/
+        padding-top: 1em;
+        border: 1em solid black;/**/
+        max-width: 10em;
+        
+}
+.none{
+    background: blue;
+    display: none ; /* loq hace esto es esconder la linea y de paso el espacio que ocupa pierde.*/
+        height: 1em;
+        margin-top: 2em;
+
+}
+.table{
+    background: cyan;
+    display: table;
+        margin: 3em;
+        padding: 2em;
+        height: 3em;
+        width: 10em;
+
+
+
+}

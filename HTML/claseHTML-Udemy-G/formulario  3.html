@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>formulario 3 </title>
+</head>
+<!--
+	select:representa un control que permite al usuario elegir de entre un número de opciones. Las opciones en una lista.
+	option: representa una opción en un control select.
+	optgroup: representa un grupo de opciones de option
+	label:  representa una etiqueta que puede ser asociada a un control de formulario, y que se supone provee una 				descripción corta para éste.
+	textarea: representa un campo para la entrada de texto multilínea. 
+-->
+<body>
+	<form action="#">
+		<label for="lenguajes"> lenguajes informaticos: </label>
+		<select  name="" id="lenguajes">	<!-- si se le agrega (multiple="") se podra seleccionar multiples-->	
+			<option value="">selecc</option>
+			<option value="html">HTML</option> <!-- value: es lo q se va a enviar. -->
+			<option value="css">CSS</option>
+			<option value="js">JS</option>
+			<option value="java">JAVA</option>
+		</select>
+		
+		<select size="5" multiple="" name="" id="lenguaje"> <!-- size: me da el tamanio de la seccion a mostar. -->		
+			<optgroup label="lenguaje de margado">
+				<option value="php">PHP</option>
+				<option value="html">HTML</option> <!-- value: es lo q se va a enviar. -->
+				<option value="js">JS</option>
+				<option value="java">JAVA</option>
+			</optgroup>
+			<optgroup label="lenguaje de disenio">
+				<option value="css">CSS</option>
+				<option value="fotoShop">fotoShop</option>
+			</optgroup> 
+		</select><br>
+
+		<label for="msn"> mensaje</label><br>
+		<textarea name="" id="msn" cols="35" rows="8" ></textarea> <!-- cols: tamanio de comunas(largo). rows: tamanio de filas (alto).  para tomar un tamanio fijo se coloca "style="resize: none"". name: es para enviar el formulario.-->
+		
+	</form>
+</body>
+</html>

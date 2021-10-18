@@ -1,0 +1,1 @@
+es un editor de imagenes que te lo reduce la imagen en px. 

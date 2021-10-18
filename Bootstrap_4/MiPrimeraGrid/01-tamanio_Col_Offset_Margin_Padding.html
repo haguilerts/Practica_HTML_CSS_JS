@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="../bootstrap4.4.1/css/bootstrap.min.css">
+      
+<style >
+[class^="col"]{
+  background: cyan;
+  border:1px solid black;
+  text-align-last: center;
+} 
+.row{
+  background: yellow;
+} 
+.columna{
+  background: #149911;
+}
+
+</style>
+    <title>mi primer grid</title>
+  </head>
+  <body>
+
+<!--////**************************************************-->
+    <div class="container"> <h1>---inicio--</h1>  </div>
+    <div class="container">
+      <h1 style="text-align: center">hola mundo</h1>
+    </div>
+    
+    <div class="container">
+      <div class="row">
+        <div class="col-1"> col 1</div>
+        <div class="col-1"> col 2</div>
+        <div class="col-1"> col 3</div>
+        <div class="col-1"> col 4</div>
+        <div class="col-1"> col 5</div>
+        <div class="col-1"> col 6</div>
+        <div class="col-1"> col 7</div>
+        <div class="col-1"> col 8</div>
+        <div class="col-1"> col 9</div>
+        <div class="col-1"> col 10</div>
+        <div class="col-1"> col 11</div>
+        <div class="col-1"> col 12</div>
+
+      </div>
+        <div class="row" >
+        <!-- solo pude ver una longitud de 12 row donde cada uno pude abarvar maximo dose, supero se crea utra fila -->
+        <div class="col-3"> 3 col  </div>
+        <div class="col-5"> 5 col </div>
+        <div class="col-4"> 4 col  </div>
+
+      </div>
+      <div class="row">
+        <div class="col-6"> col 6</div>
+        <div class="col-6"> col 6</div>
+      </div>
+      <div class="row">
+        <div class="col-12"> col 12</div>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+       <!-- ocupa el 100% de la longitud a comparacion del otro-->
+      <div class="row">
+        <div class="col-2">columna1</div>
+      </div>
+    </div>
+<!--////**************************************************-->
+    <div class="container"> <h1>---tamanios--</h1>  </div>
+      
+    <div class="container"> 
+    <!-- col divide de forma uniforme el tamanio completo -->      
+      <div class="row">
+        <div class="col">columna auto</div>
+        <div class="col">columna auto</div>
+      </div>
+      <div class="row">
+        <div class="col">columna auto</div>
+        <div class="col">columna auto</div>
+        <div class="col">columna auto</div>
+        <div class="col">columna auto</div>
+        <div class="col">columna auto</div>
+      </div>
+      <div class="row">
+        <div class="col-12">columna auto</div>
+        <div class="col-12">columna auto</div>       
+      </div>
+      <div class="row"> 
+        <!-- "col-n°": inidca (Extra small) | "col-sm-n°" : indica (small) | -->
+        <div class="col-12 col-sm-8"> 8 columna </div>
+        <div class="col-8 col-sm-3"> 3 columna </div>
+        <div class="col-12 col-sm-12">12 columna </div> 
+        <div class="col-12 col-sm-10 col-md-8 col-lg-8 col-xl-6"> colum aleatoria </div>         
+      </div>
+      <div class="row">
+        <div class="col-sm">col auto cel</div>
+        <div class="col-sm">col auto cel</div>
+        <div class="col-md">col auto table</div>
+        <div class="col-md">col auto table</div> 
+        <div class="col-lg">col auto PC</div>
+        <div class="col-lg">col auto PC</div>
+        <div class="col-xl">col auto TV</div>
+        <div class="col-xl">col auto TV</div>      
+      </div>
+    </div>
+<!--////**************************************************-->
+    <div class="container"> <h1>---columnas anidadas--</h1>  </div>
+      
+    <div class="container">
+      <div class="row">
+        <div class="col-2">1 col</div>
+
+        <div class="col-5 col-sm-8 col-md-6 col-lg-4 col-xl-2 "> padre
+          <div class="row">
+            <div class="col-6">hijo</div>
+            <div class="col-6">hijo</div>
+          </div>          
+        </div>
+
+        <div class="col-5 col-sm-2 col-md-4 col-lg-6 col-xl-8">  col_Auto 
+          <div class="row">
+            <div class="col-sm">hijoAuto</div>
+            <div class="col-sm">hijoAuto</div>
+            <div class="col-sm">hijoAuto</div>            
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-8">  auto 
+          <div class="row">
+            <div class="col-sm">hijoAuto</div>
+            <div class="col-sm">hijoAuto</div>
+            <div class="col-sm">hijoAuto</div>
+            <div class="col-sm">hijoAuto</div>
+          </div>
+        </div>
+      </div>  
+    </div>
+<!--////**************************************************-->
+    <div class="container"> <h1>--- offset --</h1>  </div>
+    <!-- offset-n°: indica cuanto me movere de isquierda a derecha con respecto al cuadro q tengo a la isquierda -->
+
+<div class="container">
+  <div class="row">
+    <div class="offset-4 col-4 columna"> col de 4 espacio</div>    
+  </div>
+  <div class="row">
+    <div class="offset-0 col-4 columna"> col de 4 espacio</div> 
+     <div class="offset-4 col-4 columna"> col de 4 espacio</div>   
+  </div>
+  <div class="row">
+    <!-- col-n° : meda el tamanio |  offset-sm-n° : me da corrimiento a la derecha con respecto a la bloque de la isquierda si hay, y no cambia tamanio dle bloque |-->
+    <div class="col-4              col-md-4 offset-lg-1 columna"> col de 4 espacio</div> 
+     <div class="col-3 offset-sm-4 offset-md-2 offset-lg-2 columna"> col de 3 espacio</div>   
+  </div>
+</div>
+
+<!--////**************************************************-->
+    <div class="container"> <h1>--- Padding-Margin --</h1>  </div>
+      <!-- con n°= 1,2,3,4,5...
+           m-n° : para margen Exteriores
+           p-n° : para margen interiores
+  l=isquierda | r=derecha | t=arriba | b=abajo | x=horizontal | y=vertical | auto=centreado
+   ej: padding-derecha : pr-3 | margin-arriba : mt-3 | padingHorizontal_para_Table : px-md-2  .. etc
+      -->
+  <div class="container">
+    <div class="row" >
+      <div class="col-2 columna py-5 pr-0   pt-sm-10  mx-lg-auto" style="background: red;">col</div>
+      <div class="col-2  offset-sm-2 columna   my-sm-2   pr-md-0 my-md-6" style="background: red;">col</div> 
+      <div class="col-2  offset-sm-2 columna   my-md-4 pl-md-0 mx-md-8   mx-lg-auto " style="background: red;">col</div>
+    </div>
+  </div>
+<!--  my-2 ml-2 px-5 py-2  ---  ml-sm-6 pt-md-2 | mt-4 ml-2 px-5 py-2 ---  ml-sm-3 py-md-2  -->
+
+
+
+
+<div class="container"> <h1>--- fin --</h1>  </div>
+<!--////**************************************************-->
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+       
+    <script src="../jquery.js"></script>
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="../bootstrap4.4.1/js/bootstrap.min.js" ></script>
+  </body>
+</html>
+<!--
+  .col- : es para celulares (Estra small) 
+  .col-sm- : es para cel.   (small)
+  .col-md- : es para tables (medium)
+  .col-lg- : es para pc     (large)
+  .col-xl- : es para TV led.(Extra Large)
+(Estra small) < 576px < (small) < 768px < (medium) < 992px < (large) < 12000px< (Extra large) < 
+-->

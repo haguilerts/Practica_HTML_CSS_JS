@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style >
+		img{
+			display: block;
+			width: 75vw;
+		}
+	</style>
+	<title>imagenes en la web y app</title>
+</head>
+<!-- srcset: Queremos mostrar la misma imágen, más grande o más pequeña dependiendo del dispositivo q usemos.
+			srcset tambien define un conjunto de imágenes entre las que le permitiremos al navegador elegir, y de que medida es cada una.
+		1)El nombre de archivo de una imagen.
+		2) espacio
+		3) El ancho inherente de la imagen en pixeles (1360w), w es la unicad utilisada,
+		y la forma como funciona es: comienza con la imagen  mas ancho asta q empesemos a reducir su tamaño  q en algun momento las otras imagenes q tiene una ancho menor empiezan a aparecer y toman su forma  .
+		4) cada imagen esta separa por una coma.
+		5)  el cambio se observa con el navegador firefox-->
+<body>
+		<!--<img src="imagen\img11.png" width="30%" height="30%"> <img src="imagen\img11.png" width="30%" height="30%">   -->
+		
+
+		<img src="" alt="imagenes" srcset="		
+			
+			imagen\mov360.jpg 600w,
+			imagen\mov.jpg 300w,
+			imagen\lap1366.jpg 1360w		
+		">
+
+		<a href="https://www.mydevice.io/">relacion entre pixel y pixelRatio</a>
+</body>
+</html>

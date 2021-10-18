@@ -1,0 +1,55 @@
+/*############# pesos absolutos ############
+    -Etiqueta -> 1
+    -Clases y pseudoclases -> 10
+    -Id -> 100
+    -Estilos en línea -> 1000
+    -!important -> Gana a todo;
+
+    -important -> especificidad -> cascada
+*/
+
+p {
+    color: blue;
+}
+
+a {
+    /* "inherit": quiere decir q HEREDA, el color de su padre q es "p"*/
+    color: inherit;
+}
+
+p {
+    /* CASCADA: este "p" gana al otro xq se lee de arriba hacia abajo. 
+        y el ultimo es q muestra eñ resultadpo pisando al primero*/
+    color: red;
+}
+
+.parrafo {
+    /* esn este caso la class tiene un peso de 10 > etiqueta*/
+    color: green;
+}
+
+#parrafo {
+    /* esn este caso la id tiene un peso de 100 > class> etiqueta*/
+    color: blueviolet;
+}
+
+
+/*por ultimo los estilos en linea tiene mas peso q las otras q se lo comoca en el html */
+
+
+/*si uso "!important" manda a todos absolutamente */
+
+
+/*  p{
+        color: blue !important;
+    }
+    .parrafo-2{
+        color:black !important ;
+    } */
+
+
+/*si en la primera linea tengo una class y !important,
+     en la segunda linea tengo etiqueta y un !important,
+     entoces se suman ambas y gana el q tiene mas pesoy al tener 
+     ambas important es como ninguno tuviera.
+     En este caso gana la primera*/

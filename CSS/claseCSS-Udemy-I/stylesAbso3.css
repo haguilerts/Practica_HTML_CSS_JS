@@ -1,0 +1,78 @@
+/* 
+Position absolute:
+    -El elemento no conserva su espacio en el flujo.Si no tiene dimensiones
+        declaradas, sus dimensiones se ajustan al contenido.
+    -Su punto de referencia (contexto) es el elemento que 
+        lo contenga posicionado más cercano, si no encuentra 
+        ninguno será el viewport (el espacio visible en pantalla)
+
+Al ser un elemento posicionado lo podemos mover en los 3 ejes X Y Z
+*/
+
+.container {
+    width: 300px;
+    height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    border: 3px solid black;
+    position: relative;/*2) al colocar en este contenedor Pos.Relative
+    hago q este cuadro se combierta en el plano ABS para los box.
+    osea q no podran salir de este cudro hacia afuera.*/
+}
+
+[class^=box] { /*atributo q comiencen con rojo*/
+    width: 50px;
+    height: 50px;
+}
+p{
+    position: absolute;
+
+        padding-top: 20%;
+        padding-left: 30%;
+}
+
+.box1 {
+    border: 4px solid lightcoral;
+    position: absolute;/* 1)al colocar la PosAbsoluto lo 
+    q hago es ajusto el eje 0,0 en hay, que seria el contorno del body (se llama espacio viewport=body)*/
+    top: 0px;
+    left: 0px;
+
+    bottom: 0px;
+    right: 0px;
+}
+
+.box2 {
+    border: 4px solid blue;
+    position: absolute;
+
+        top: 0;
+        right: 0;
+}
+
+.box3 {
+    border: 4px solid green;
+    margin: 5px;
+   position: absolute;
+    bottom: 0;
+    right: 0; 
+}
+
+.box4 {
+    border: 4px solid lightseagreen;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.box5 {
+    border: 4px solid darkorange;
+    position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+    margin: auto;
+    
+}

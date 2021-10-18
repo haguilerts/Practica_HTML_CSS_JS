@@ -1,0 +1,79 @@
+.input,.label {
+    display: block;
+}
+
+/*
+UI States
+    :enabled
+    :disabled
+    :checked
+    :in-range
+    :out-of-range
+    :required
+    :optional
+    :valid
+    :invalid
+
+    :read-only : solopara campos de lectura
+    :read-write: solo para campos lectura y escritura
+*/
+
+    .input:enabled {/* HABILITAR las opciones para escribir en cada casillero*/
+        background: red;
+    }
+    
+
+    .input:disabled { /* DESABILITAR las opciones para escribir en cada casillero*/
+        background: yellow;
+        border: none;
+    }
+
+    .input:checked + label {/*hace q al PRECIONAR el tilde el otro (label) pueda pueda modificarce  */
+        font-size: 3em;
+        color: blue;
+        background-color: red;/* si el display desaparece  */
+        display:inline;   
+            margin-left: 3em;
+            background-color: yellow;
+    }
+
+
+    .input:in-range{/*si estoy DENTRO del rango numericos, el color azul se mantine caso contraio vuelve a su color de estado*/
+        background: blue;
+    }
+
+    .input:out-of-range{/*si estoy AFUERA del rango numericos, el color cambia a  cyan */
+        background: cyan;
+    }
+/*************************************************************/
+     .input:optional{/*esta opcion hace q afecte a todo exeptos aquellos q lleven en el html un "required"*/
+        background: purple;
+    }
+     .input:required{/*este campo marca todo aquel q lleve "required" y pueda modificar*/
+        background: lightcoral;
+    }
+    .input:valid{/*es un campo de validacion*/
+        background: green;
+    }
+    .input:invalid{/*es un campo de invalidacion*/
+        background: white;
+    }
+
+    /*
+    Structural
+        :root
+        :nth-child()
+        :nth-last-child()
+        :nth-of-type()
+        :nth-last-of-type()
+        :first-child
+        :last-child
+        :first-of-type
+        :last-of-type
+        :only-child
+        :only-of-type
+        :empty
+
+    Negation
+        :not()
+    */

@@ -1,0 +1,29 @@
+body{
+	background-image: url("img/fondo1.jpg");
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+
+
+}
+
+h1{
+	color:Red;
+	font-size: 3em;
+}
+
+h2{
+	color:Blue;
+	font-size: 2.5em;
+}
+
+p{
+	color:Green;
+	font-size: 1.8em;
+}
+
+
+a{
+	color:red;
+	font-size: 1.3em;
+}

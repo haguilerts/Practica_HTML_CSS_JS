@@ -1,0 +1,122 @@
+* {
+    font-family: 'Franklin Gothic Medium';
+}
+
+
+/* Selector de etiqueta */
+
+nav {
+    color: blue;
+}
+
+.title {
+    color: blue;
+}
+
+
+/* Selectores de clase */
+
+.p {
+    color: red;
+}
+
+
+/* Selectores de ID */
+
+#p {
+    color: rgb(4, 207, 4);
+}
+
+#text {
+    color: blueviolet;
+}
+
+p {
+    border: 1px solid black;
+}
+
+
+/* Selectores universales (a todo el documento HTML) */
+
+
+/* 
+
+Selectores de atributo, se coloca en [] 
+Seleccionar los elementos que tienen ese atributo 
+[href] {
+    color: green;
+}
+
+//Seleccionar los elementos que tienen ese atributo y ese valor
+[href="#"] {
+    color: red;
+}
+
+Seleccionar los elementos que tienen ese atributo "al menos ese valor una vez". 
+[class~="verde"] {
+    // "~": selecc, ese traibuto al menos el valor una ves .tiene mas peso q href 
+    color: green;
+}
+
+Seleccionar los elementos que tienen ese atributo y exactamente ese valor o empieze por el valor seguido de un guión
+[class|="verde"] {
+    //el atributo solo tiene que tener ese valor ni mas ni menos.
+    color: blue;
+}
+
+Seleccionar los elementos que tienen ese atributo y empiezan por ese valor
+[class^="rojo"] {
+    //atributo q comiencen con rojo
+    color: purple;
+}
+
+Seleccionar los elementos que tienen ese atributo y terminan por ese valor
+[class$="rojo"] {
+    //el atributo q termine con rojo
+    color: steelblue;
+}
+
+Seleccionar los elementos que tienen ese atributo y contengan ese valor
+[class*="rojo"] {
+    color: brown;
+}
+*/
+
+
+/*######### Selectores combinadores #########*/
+
+
+/* Selector de hermano adyacente (solo se aplica a todo los hermanos mmenores a el. x ensima no puedo) 
+Selecciona al hermano que esté justo por DEBAJO de el. El estilo se aplica al hermano inferior 
+h1+h2 {
+    //en este  selcciona Subtítulo h2
+    color: red;
+}
+h2+h2 {
+    //en este  selcciona Otro subtítulo h2 
+    color: blue;
+}
+
+
+Selector de hermano general 
+Selecciona TODOS los hermanos que esté por el y debajo de el. El estilo se aplica a todos los hermanos
+h1~h3 {
+    //se aplica a tpodo h3
+    color: green;
+}
+
+
+Selectores descendentes 
+Selecciona todos los hijos(QUE ESTEN DENTRO DE P). El estilo se aplica a todos los hijos 
+p span {
+    //tambien se puede usar el "div span"
+    color: red;
+}
+
+Selector de hijo directo 
+//Selecciona todos los hijos que sean directos, es decir que no estén dentro de otras etiquetas. El estilo se aplica a todos los hijos 
+p>span {
+    span es hijo de p. p es hijo de div. pero sapn no es hijo de div 
+    color: blue;
+}
+*/

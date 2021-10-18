@@ -1,0 +1,28 @@
+/* 
+Position fixed:
+	-El elemento no conserva su espacio en el flujo.
+	-Si no tiene dimensiones declaradas, sus dimensiones se ajustan al contenido.
+	-Su punto de referencia (contexto) es el viewport=body (el espacio visible en pantalla)
+	-Al ser un elemento posicionado lo podemos mover en los 3 ejes X Y Z
+*/
+
+body{
+    padding-top: 6em;
+
+}
+h1,p{ padding-left: 1em; }
+
+.menu{
+    background:darkcyan;
+    padding: .5em; /*.5=0.5*/
+    text-align: center; /*centreo el texto*/
+    font-size: 2em; /*dimencion del texto*/
+    position: fixed;/* lo q haces es q el menu no tenga una posion fina en el eje (x e y)  
+    a pesar q me desliza hacia abajo (es como q estaria flotando)*/
+    	top: 0;/*se corre hacia arriba*/
+    width: 100%;/*toma el maximo ancho*/
+}
+
+.title{
+    margin: 0;
+}

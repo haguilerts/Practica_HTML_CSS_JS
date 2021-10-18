@@ -1,0 +1,94 @@
+*{ /** reset*/
+	margin: 0; /** espacio del contenedor hacia afuera*/
+	padding: 0; /** espacio del contenedor interor*/
+	box-sizing: border-box;
+}
+body{
+	width: 1200px;
+	
+}
+nav{
+	height: 60px;
+	background-color: blue;
+}
+header{
+	height: 350px;
+	background-color: yellow;
+	margin-bottom: 30px;
+	padding-left: 20px; 
+}
+section{
+	height: 650px;
+	background-color: green;	
+}
+footer{
+	height: 100px;
+	background-color: orange;
+	
+}
+aside{
+	height: 50px;
+	background-color: maroon;
+}
+
+#principal{
+	width: 800px;
+	height: 650px;
+	background-color: blue;
+	float: left; 
+}
+#noticias{
+	width: 400px;
+	height: 650px;
+	background-color: red;
+	float: right;        /**flotador */
+	       
+}
+article{
+	width: 400px;
+	height: 100px;
+	float: left;
+	padding: 10px;
+	background-color: lime;
+}
+#promociones{
+	height: 315px;
+	background-color:blue; 
+	}
+	#promo1{
+		width: 275px;
+		height: 275px;
+		float: left;
+		background-color: orange;
+		margin: 20px;
+		margin-right:0px; 
+
+	}
+	#promo2{
+		width: 275px;
+		height: 275px;
+		float: left;
+		background-color: #00ffff;
+		margin: 20px;
+		margin-right:0px; 
+
+	}
+	
+	#promo3{
+		width: 275px;
+		height: 275px;
+		float: left;
+		background-color: yellow;
+		margin: 20px;
+		margin-right:0px; 
+
+	}
+	#promo4{
+		width: 275px;
+		height: 275px;
+		float: left;
+		background-color: red;
+		margin: 20px;
+		margin-right:0px; 
+
+	}

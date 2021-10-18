@@ -1,0 +1,6 @@
+body{
+	background-image: url("img/j22.jpg");
+	background-size: cover; /** ajusata la pantalla pero te mobes con la foto**/
+	background-attachment: fixed; /** hace q la imagen no se mueva junto con las letras, cuando deslizamos para abajo o arriba*/
+	background-repeat: no-repeat; /** hace q no se repita las imagens simultanias**/
+}

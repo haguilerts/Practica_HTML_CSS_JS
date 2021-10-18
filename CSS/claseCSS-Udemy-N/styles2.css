@@ -1,0 +1,58 @@
+/*
+TEXT
+    Text-transform: Transforma el texto a mayúsculas, minúsculas, etc.
+        lowercase (minusculas) | uppercase (mayusculas) | capitalize (primera letra de cada palabra en mayusculas)
+
+    text-align: Alinea el texto del elemento a la izquierda, derecha, etc. SOLO ELEMENTOS DE BLOQUE (excepto en botones, que aunque sean de elementos en línea funciona)
+        center | left | right | justify
+
+    text-decoration: Establece la decoración del texto
+        overline | line-through | underline | none
+
+    text-indent: mueve la primera linea de un de texto. SOLO ELEMENTOS DE BLOQUE
+*/
+
+/* .title {
+        text-transform: capitalize;
+    }
+
+    .paragraph {
+        text-align: justify;
+        text-indent: 50px;
+    }
+
+    
+
+/*
+OTHER
+    line-height: establece la altura de la linea
+    letter-spacing: establece la separacion de las letras con una medida en cualquier unidad
+*/
+.title{/* lowercase (minusculas) | uppercase (mayusculas) | 
+    capitalize (primera letra de cada palabra en mayusculas)*/
+    text-transform: lowercase;
+}
+
+.box {/**/
+    width: 200px;
+    height: 200px;
+    background: red;
+}
+
+.box__item {/**/
+    text-align: center;/*lo centrea en lo horizontal*/
+    line-height: 100px;/*lo centrea en la vertical, pero funciona de lineas cortas */
+}
+
+.paragraph {
+    text-align: justify;/* justify | center | right | justify(palabras separadas)*/
+    letter-spacing: 5px;/*separacion de letras */
+}
+.link {/* text-decoration: overline(linea superiro) | line-through(linea tachado) | 
+    underline(linea inferiro, lo q viene x defecto) | none(ninguna decoraion)*/
+        text-decoration: none;
+    } 
+
+.class2{/*mueve la primera linea de un de texto. SOLO ELEMENTOS DE BLOQUE*/
+    text-indent:30px;/*tiene unidades de px,em,rem,% y otros. tambien usaba valores negativos*/
+}

@@ -1,0 +1,86 @@
+/*
+   Alineamiento:
+    	justify-items: Alinea los elementos horizontalmente respecto a la celda
+    	align-items:   Alinea los elementos verticalmente respecto a la celda
+    	    Admiten los valores:
+        	start o flex-star: los elementos se alinean al comeimzo respecto a la selda
+        	end: los elementos se alinean al final respecto a la selda
+        	center: los elementos se centran respecto a la selda
+        	stretch (default): ocupa toda la selda.
+
+    		place-items: Engloba las propiedades justify-items y align-items
+      		place-items: align-items justify-items (primero va align luego separado por un espacios va justify)
+-------------------------------------------------------------------------------------------------------------------------------
+    	justify-content: Alinea los elementos horizontalmente respecto al contenedor
+    	align-content: Alinea los elementos verticalmente respecto al contenedor
+
+    	    Admiten los valores:
+        	start
+        	end
+        	center
+        	stretch (default)
+        	-space-around
+        	-space-between
+        	-space-evenly
+
+    		place-content: align-content justify-content
+--------------------------------------------------------------------------------------------------------------------------------
+    Tenemos las mismas propiedades con self para los items:
+        justify-self
+        align-self
+        place-self
+
+              Admite los valores:  
+            	start
+           	end
+            	center
+            	stretch
+
+    order: Funciona igual que en flexbox, por defecto todos los items tienen order:0. serian pocisionamiento de las seldas 
+----------------------------------------------------------------------------------------------------------------------------------
+*/
+
+body {
+    height: 100vh;
+    color: #eee;
+    font-family: sans-serif;
+    background-image: radial-gradient(circle, #b94bf8, #3a1957);
+    background-repeat: no-repeat;
+}
+
+.grid-container {
+    display: grid;
+    grid-gap: 10px;
+    height: 80vh;
+    border: 3px solid yellow;
+    grid-template-columns: repeat(3, 1fr);/* 2) achicar las seldas para ver justify-content*/
+    /* justify-items: center; /*centreo horizontal respecto a cada selda */
+    /* align-items: center; /*centreo vertical respecto a cada selda */
+    /* place-items: center end; /* englova a los dos anteriores propiedades*/
+
+	/* justify-content: start; /* seldas a la isqueirda*/
+	/* justify-content: end; /* seldas a la derecha */
+	/* justify-content: center ; /* seldas centreado */
+	/* justify-content: space-around; /* seldas a la derecha */
+    	/* justify-content: space-evenly; /* 1) espacio en los contornos y las columnas ceparadas por igual*/
+	/* justify-content: space-between/* sin espacio en los contornos y las columnas ceparadas por igual*/
+    	/* align-content: space-evenly; /* lo relaiza todo lo mismo q justify pero en forma vertical*/
+    	/* place-content: center end; /* hace los mimos q align(vertical) justify(horizontal) */
+}
+
+.grid-item {
+    border: .5px solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    padding: 1rem;
+}
+
+.grid-item:nth-child(2) {
+    /* align-self: stretch; /*ocupa todo el selda  disponible en la fila*/
+    /* justify-self: stretch; /*ocupa todo el selda  disponible en la columna */
+    /* place-self: start end;  /*ocupa todo el selda  disponible en ambas */
+    background-color: royalblue;
+    order: -1;/*pocisionamiento de las celdas */
+}

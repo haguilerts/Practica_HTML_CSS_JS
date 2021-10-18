@@ -1,0 +1,72 @@
+/* 
+    Normalmente necesitamos resetear los estilos por defecto de una lista
+        margin-top:0;
+        margin-bottom:0;
+        padding-left:0;
+
+    Hay tres propiedades para las listas, se pueden aplicar al padre o a los elementos de la lista
+
+    list-style-type: Establece el estilo de viñeta
+        disc: es un punto
+        circle: circulo sin relleno
+        square: cuadrado
+        decimal: lista de numero
+        decimal-leading-zero: lista de numero con cero x delante
+        lower-roman: numero romanos minusculas
+        upper-roman: numero romanos mayusculas;
+        upper-latin: letras normal mayusculas;
+        lower-latin: letras normal minusculas
+        lower-greek: letra griego        
+       
+    list-style-position: Hace que las viñetas se coloquen por dentro o por fuera del elemento
+        outside | inside
+        
+    list-style-image: Pone una imagen en lugar de la viñeta, 
+    no se suele utilizar porque hay formas mucho más eficientes de hacerlo
+        url(imagen)
+
+    Normamente se suele usar el shorthand list-style
+*/
+
+/* .list { indice con letras de la lista.
+    list-style-type: lower-latin;
+    } */
+
+/* .list { indice con img de la lista(no es recopmendado)
+    list-style-image: url(check.png)
+} */
+    .list__item::before {/*indice con img de la lista(si es recopmendado)*/
+        content: '';
+        display: inline-block;
+            width: 1em;
+            height: 1em;
+            background-image: url(check.png);
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+            padding-right: 1em;
+    } 
+     .list__item {
+         background-image: url(check.png);
+        background-position: 0 0;
+        background-size: contain;
+        background-repeat: no-repeat; 
+       /* esta es otra forma de hacerlo
+        padding-left: 2em;  
+        background: url(check.png) 0 0 / contain no-repeat;   */
+    }
+
+    /*.list {
+        margin-top: 0;
+        margin-bottom: 0;
+        padding-left: 0;
+        list-style: none;
+    }*/
+
+    /* .list__item {
+        background: red;
+    } */
+    .list__item{
+        float: left;
+        padding-right: 1em;
+    }

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Reset CSS</title>
+
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="estilos.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="../bootstrap-5.0.0-beta1-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../myEstilo.css">
+
+</head>
+
+<body>
+
+    <h1 class="text-center text-light bg-dark">Resetear Los Estilos CSS</h1>
+    <main class="">
+        <header>
+            <div class="banner text-center">
+                <img class="w-auto h-50" src="img.jpg" alt="Banner de la web">
+                <img class="w-auto h-50" src="https://uniwebsidad.com/static/libros/imagenes/css-avanzado/f0201.gif" alt="..">
+            </div>
+        </header>
+        <section>
+            <article class="fs-4">
+                <ul>
+                    <li>En primer lugar, se aplican los estilos del navegador</li>
+                    <li>En segundo lugar, los estilos del usuario.</li>
+                    <li> En tercer lugar, los estilos del programador/diseñador.</li>
+                </ul>
+                Cuando los navegadores muestran una página web, además de aplicar las hojas de estilo de los diseñadores, siempre aplican otras dos hojas de estilos: la del navegador y la del usuario. <br> La hoja de estilos del navegador se utiliza para
+                establecer el estilo inicial por defecto a todos los elementos HTML: tamaños de letra, decoración del texto, márgenes, etc. Esta hoja de estilos siempre se aplica a todas las páginas web, por lo que cuando una página no incluye ninguna
+                hoja de estilos propia, el aspecto con el que se muestra en el navegador se debe a esta hoja de estilos del navegador. <br> Por su parte, la hoja de estilos del usuario es la que puede aplicar el usuario mediante su navegador. Aunque la
+                inmensa mayoría de usuarios no utiliza esta característica, en teoría es posible que los usuarios establezcan el tipo de letra, color y tamaño de los textos y cualquier otra propiedad CSS de los elementos de la página que muestra el navegador.
+                <br>
+                <p class="fw-bold text-center  text-primary">*{ margin: 0; padding: 0; }</p>
+                existe normalize.css
+            </article>
+
+        </section>
+        <section class="row">
+            <article class="col-4">
+                <div class="isquierda"> /* No olvides definir estilos para focus. </div>
+                <div class="isquierda">/* No olvides resaltar de alguna manera el texto insertado/borrado.</div>
+                <div class="isquierda">/* En el código HTML es necesario añadir cellspacing="0".</div>
+
+            </article>
+            <aside class="col">
+                <div class="reset">
+
+                    <p> <strong>body</strong> { line-height: 1; }</p>
+                    <p> <strong>ol, ul</strong> { list-style: none; }</p>
+                    <p> <strong>blockquote, q</strong> { quotes: none; }</p>
+                    <p><strong>blockquote:before, blockquote:after, q:before, q:after</strong> { content: ''; content: none; }</p>
+                    <p><strong>focus</strong> { outline: 0; }</p>
+                    <p><strong>ins</strong> { text-decoration: none; } </p>
+                    <p><strong>del</strong> { text-decoration: line-through; }</p>
+                    <p><strong>table</strong> { border-collapse: collapse; border-spacing: 0; }</p>
+                    <p><strong>html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i,
+                        center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td </strong> { margin: 0; padding: 0; border: 0; outline: 0; font-size: 100%; vertical-align: baseline; background: transparent;
+                        }
+                    </p>
+                    <p>
+                        *, *:before, *:after { box-sizing: border-box; margin: 0; padding: 0; }
+                    </p>
+                </div>
+            </aside>
+        </section>
+    </main>
+
+
+    <a href="https://necolas.github.io/normalize.css/">ir a descargar y usarlo el estilo(normalize)</a>
+</body>
+
+</html>

@@ -1,0 +1,25 @@
+:root {/*aca PseudoClass es para declaro variable
+	--nombreVariable: valor;  */
+    --colors: blue;
+    --borders: 8px solid yellow;
+}
+
+.paragraph {/*aca la class es para usar la variable
+	proíedad: var(nombreVariable)*/
+    color: var(--colors)
+}
+/*aca uso la encascada   + .box  */
+.article{/*aca aplica a la clase y a sus hijos*/
+    --colors:green;
+}
+
+.check:checked + .box {/*solo para tipo checkbox se aplica esto*/
+    --colors: purple;
+}
+
+.box{
+    width: 100px;
+    height: 100px;
+    background: var(--colors);
+    border:var(--borders);
+}

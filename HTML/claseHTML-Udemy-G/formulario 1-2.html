@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<!--
+	  input type= 
+			text(default) es una entrada de texto
+			password: campo para contraseña(no encripta solo oculta)
+			submit: boton para enviar el formulario
+			button: igual q submit
+			image: envia el formulario usando una imagen personalisada
+			reset: reinicia el formulariovaciando los campos 
+			checkbox: crea un checkbox(seleccion cantidad necesaria de items).
+			color: permite seleccionar un color de la paleta de colores 
+			date: permite seleccionar una fecha del calendario
+			datatime-local: permite seleccionar fecha y hora 
+			month: permite seleccionar una mes del calendario
+			week: permite seleccionar una semana
+			email: sirve para introducir un correo validado x html(insegura) validar desde el servidor y js.
+			fele: permite subir archivos la servidor
+			number: permite introducir valores numericos 
+			range: crea una slide para seleccionar un valor numerico (deslisamiento de longitud)
+			search: crea un campo igualq text pero con semantica de busqueda
+			tel: crea un capo para introducir telefno , en movil sale un teclado diferencte 
+			time: permite seleccionar una hora.
+			url: crea un campo para introduccir una URL.
+			datalist: cra un filtro que ñpueda buscar. aunq mayormente eso se hace con js.	
+	-->
+	<style >
+		#apell, #age, #pass{
+			display: block;
+		}
+	</style>
+	<title>formulario I</title>
+</head>
+<body>
+
+	<img src="imagen.jpg"> <br>   <!---->
+
+	<form action="#"> <!--cierra todo los campos del formulario. action: al poner "#" hace q no borre los datos ingresados, si lo saco una ves enviado borra los datos.--> 
+		 <label>	nombre
+		 	<input type="text" >
+		 </label> <!--representa el nombre del campo-->
+		 <label for="apell"> apellido </label>
+		 	<input type="text" id="apell">
+
+		 <label for="age"> edad </label>
+		 	<input type="number" id="age">
+
+		 <label for="pass"> password </label>
+		 	<input type="password" id="pass" >
+
+		 	<input type="submit" value="insertar"><!-- value: loq va mostra el nombre del boton-->
+		 	<input type="image" src="enviar.jpg" height="10%" width="10%">
+		 	<button> enviar formulario</button>
+	 		<input type="reset" value=" reiniciar ...!">
+
+ 		<legend> seccion de sexo:</legend><!-- legend: titulo-->
+	 		<label for="man">hombre</label> 
+	 		  <input type="radio" name="sex" id="man">
+	 		<label for="woman">mujer</label>
+	 		  <input type="radio" name="sex" id="woman" >
+
+ 		<legend>seleccion de hobbies</legend>
+ 			<label for="html"> HTML</label>
+ 				<input type="checkbox" id="html"> 
+ 			<label for="css"> CSS</label>
+ 				<input type="checkbox" id="css"> 
+ 			<label for="js"> JavaScrip </label>
+ 				<input type="checkbox" id="js"> 
+
+ 			<P>FECHA:</P><input type="date" name="fecha">
+ 			<P>hora:</P><input type="time" name="hora">
+ 			<P>mes/año:</P><input type="month" name="">
+ 			<P>sem/año:</P><input type="week" name="">
+
+ 			<p>color: </p><input type="color" name="">
+ 			<p>email: </p><input type="email" name="">
+ 			<input type="file" name=""><!-- es para seleccionar un archivo y poder subir.-->
+
+ 			<input type="range" name="" min="0" max="50" step="5"><!-- step: seslisamiento paso a paso.-->
+ 			<input type="search" name=""> <!-- search: es un buscador.-->
+ 			<input type="tel" name="">
+ 		
+ 			<label for="browsers"> elija un navegador </label>
+ 			<input list="browsers" id="browsers">
+ 			123
+ 			<datalist>
+ 					<option value="chrome"> <!-- un filtro para elejir el tipo de navegador-->
+ 					<option value="ferefox">
+ 					<option value="IE">
+ 					<option value="Brave">
+ 			</datalist>
+			456
+	</form>
+	<a href="https://caniuse.com/"> Etiquetas en vigencia</a>
+</body>
+</html>

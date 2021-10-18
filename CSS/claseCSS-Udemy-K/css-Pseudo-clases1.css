@@ -1,0 +1,99 @@
+/*
+Dynamic
+    :link (links) - Link no visitado
+    :visited (links) - Link visitado
+    :active (links) - El momento del click
+    :hover - Al poner el mouse sobre el elemento
+    :focus - Cuando el elemento tiene el foco
+
+Target
+    :target - Elemento es objetivo de un marcador o ancla
+
+Language
+    :lang() - Elemento que contiene el atributo lang que especifiquemos
+*/
+
+
+   /* ===Ejercicios PSEUDOCLASES I=== */
+
+        .link:link{/*es cuando la clase no es visitado*/
+            
+            color:  yellow;
+        }
+
+        .link:visited {/*es cuando fue visitado la pagina*/
+             
+            color: black;
+        }
+
+        .link:active {/*aca al moemnto de precionar el enlace me cambia el fondo y el color de letra*/
+            font-family: verdana;/*tipo de letra*/
+            color: yellow;
+            background: red;
+        }
+        .button {
+            text-decoration: none;
+            display: inline-block;
+            background: red;
+            padding: .5em;
+            border-radius: 10px;
+            color: #FFF;
+        }
+        .button:active {/* lo q hace es q al momento de precionar cambie la escala*/
+            transform: scale(.7)
+        }
+        .title:hover { /* cuando el maus se acerca aca sin dar clip, se realisa el cambio*/
+            color: blueviolet;
+            font-style: italic; /**tipo de letra inclinada 60° **/
+        }
+        .button:hover {/*lo mismo q el anterior*/
+            color: red;
+            background: #fff;
+            border: 2px solid;
+            border-radius: 10px;
+        }
+        .input:focus{/*cuando preciona e ingresar usuario el fondo cambi de color */
+             background: green;
+        }
+/*************************************************/
+
+        .text { /*ceparo el parrafo*/
+            margin-top: 500px;
+            margin-bottom: 500px;
+        }
+        .menu { /*menu del parrafo*/
+            background: lightblue;/*color*/
+            display: block;
+            padding: 3px;
+            text-decoration: none;
+            text-align: center;/*centrea el texto*/
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+        }
+
+        .text:target {/*se aplica para marcadores*/
+            padding-top: 50px;
+            text-align: center;
+        }
+        .span {
+            display: block;
+        }
+        .span:lang(en) {/*lang: es una funcion q se le pasa un ñparametro */
+            color: red;
+        }
+         .span:lang(es) {
+            color: blue;
+        }
+    /*
+        
+        
+        
+
+        
+
+        
+
+       
+        */

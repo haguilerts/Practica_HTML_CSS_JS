@@ -1,0 +1,100 @@
+/* 
+*Overflow: Es una propiedad que controla como se va a comportar la caja con el             contenido que se desborde de ella
+           Es un shorthand que engloba overflow-x y overflow-y
+
+        Tiene 3 valores posibles:
+        -hidden: Oculta todo el contenido que se desborde
+        -auto: Muestra la barra de scroll solo si hace falta
+        -scroll: Muestra ambas barras de scroll independientemente de si se necesitan
+
+Float: La propiedad float especifica si un elemento debe salir del flujo normal
+        y aparecer a la izquierda o a la derecha de su contenedor, donde los elementos
+        de texto y los en línea aparecerán a su alrededor
+         Tiene 3 valores posibles:
+            *left : El elemento flota a la izquierda de su bloque contenedor.
+            *right : El elemento flota a la derecha de su bloque contenedor.
+            *none : El elemento no flota.
+
+             --NO EXISTE FLOAT:CENTER!!
+            *Un elemento flotado hace que el padre deje de contenerlo, 
+                hay varias formas de solucionarlo, la más cómoda es overflow:hidden
+
+clear: especifica si un elemento puede estar al lado de elementos flotantes 
+    que lo preceden o si debe ser movido (cleared) debajo de ellos. La propiedad 
+    clear aplica a ambos elementos flotantes y no flotantes.
+        |ninguno | izquierda | derecho | ambos | inicio en línea | final en línea   
+            clear: none;  (Es un keyword que indica que el elemento no es movido hacia abajo para limpiar elementos flotantes anteriores.)
+            clear: left;   (Es un keyword que indica que el elemento es movido hacia abajo para limpiar elementos flotantes a la izquierda.)
+            clear: right;  (Es un keyword que indica que el elemento es movido hacia abajo para limpiar elementos flotantes a la derecha.)
+            clear: both;   (Es un keyword que indica que el elemento es movido hacia abajo para limpiar tanto elementos flotantes de la izquierda como de la derecha.)
+            clear: inline-start; (Es un keyword que indica que el elemento es movido hacia abajo para limpiar elementos flotantes al inicio del bloque contenedor, estos son los elementos con valor float left en scripts ltr (left to right) y elementos con valor float right en scripts rtl (right to left).)
+            clear: inline-end; (Es un keyword que indica que el elemento es movido hacia abajo para limpiar floats al final del bloque contenedor, estos son los elementos con valor float right en scripts ltr (left to right) y elementos con valor float left  en scripts rtl (right to left).)
+             clear: inherit;
+                https://developer.mozilla.org/es/docs/Web/CSS/float
+                https://developer.mozilla.org/es/docs/Web/CSS/clear  
+*/
+
+    .article-float {
+        width: 50%;
+        border: 1px solid blue;
+        padding: 1em;
+        height: 200px;
+        margin-bottom: 10px;
+        position: relative;
+        font-size: 2vw ;
+       /*  overflow: hidden;*/
+         /*overflow: hidden;/*mustra el ultimo contenido del cuadro recortado */
+        /*overflow: scroll;/*usamos la barra de despliegue vertical y horisontal*/
+        /*overflow: auto;/*usamos la barra d despliegue vertical*/ 
+    }
+    .text{
+        position: absolute;
+            min-width: 5%;
+            min-height: 20%;
+            font-weight: 3em;
+            /*font-size: 2vh;*/
+            /*;
+            height: auto;
+            */
+
+    }
+    .articleImg{
+        border: 1px solid blue;
+        margin-top: 30px;
+         overflow: scroll;
+    }
+    .articleImg img{/*aca hago cambios a la imagen*/
+        max-width: 50%;/*la imagen toma el %*/
+        float: right;/*hace q la imagen se mueva a la derecha y el texto quede a la isquierda aunq luego toma el texto ambos lados*/
+        margin-left: 15px;/*separo el texto y la imagen*/
+        clear:none ;
+    }
+
+    .articleImg2{ 
+        border: 1px solid blue; 
+        overflow:hidden ;/* 2) con esto la imagen recuadra a ambos*/
+        margin-top: 30px;
+    }
+    .articleImg2 img{/*aca hago cambios a la imagen*/
+        max-width: 50%;/*la imagen toma el %*/
+        float: right;/*hace q la imagen se mueva a la derecha y el texto quede a la isquierda aunq luego toma el texto ambos lados, y luego con left visiversa*/
+        /* 1) en este caso el cobres solo aplica al texto 
+            y no a la imagen, esa es la desventaja de float*/ 
+        margin-left: 15px;/*separo el texto y la imagen*/
+        clear:none ;
+    }
+    .p{
+        color :red;
+        float: both;
+        clear: none;
+    }
+/*
+
+   
+
+   
+
+    
+*/
+
+

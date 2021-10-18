@@ -1,0 +1,64 @@
+/* 
+
+Outline(tamanio, estilo, color)
+
+outline-width
+    px|em|rem|%|....
+
+outline-style
+    none|hidden|dotted|dashed|solid|double|groove|ridge|inset|outset|initial|inherit;
+
+    *Estas medidas dependen del navegador*
+    thick (ancho)
+    medium (medio)
+    thin (fino)
+        
+outline-color
+    css native|rgb|rgba|hsl|hsla|hexadecimal|transparent
+
+outline-top-(width | style | color)
+outline-right-(width | style | color)
+outline-bottom-(width | style | color)
+outline-left-(width | style | color)
+
+*/
+/*
+[class*=box] {
+    width: 200px;
+    height: 200px;
+    margin: 2em;
+}*/
+/*
+.box1 {
+    background: yellowgreen;
+    border: 5px solid red;
+    border-top-width: 200px;
+    border-top-color: transparent;
+}
+*/
+.img-box{
+    width: 80%;
+   /* margin-top: 2em; 
+    margin-left: auto; /*solo para elementos ne bloques*/
+    /*margin-right: auto;*/
+    margin:2em auto; /*el margin se lo da 32px a los 4 lados y lo distribuye de forma auto*/
+    
+    position: relative;
+    display: flex; /**/
+    justify-content:center;/**/
+    align-items: center;/*el texto centrea*/
+
+}
+.img{
+    border:10px solid red;
+    outline: 15px solid blue;
+    outline-offset: 7px; /* separacion de borde hacia afuera, q esta siendo pisado*/
+    outline-offset: -40px;/*va pisado al anteriro y separa en sentido contrario(hacia adentro)*/
+
+}
+.text{
+    position: absolute;/**/
+    color:red; /*color de letra*/
+    font-size: 3em; /*la letra se hace mas grande*/
+
+}

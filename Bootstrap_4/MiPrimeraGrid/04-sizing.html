@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="../bootstrap4.4.1/css/bootstrap.min.css">
+    <style >
+    	
+		.row{
+		  background: red;	
+		  padding: 4px;	  
+		} 
+		[class^="col"]{
+		  background: cyan;
+		  border:1px solid black;
+		  text-align-last: center;
+		  max-height: auto;
+		} 
+		.ancho{
+		  background: yellow;
+		  margin-bottom: 1em;
+		  margin-top: 1em;
+		  
+		}
+		.alto{
+			 background: yellow;
+			 margin-bottom: 5px;
+		}
+		
+		
+    </style>
+	<meta charset="UTF-8">
+	<title>mi cuarta  forma de sizing</title>
+</head>
+<body>
+	<!--////**************************************************-->
+    <div class="container"> <h1>---inicio--</h1>  </div> 
+   
+<div class="container"> <h1>--- sizing  --</h1>  </div>
+<!--////**************************************************-->
+
+	<div class="container">
+		<div class="row">
+			<h1> Ancho </h1>
+			<div class="col-12">
+				<div class="w-100 ancho py-3 " > col de ancho 100</div>
+				<div class="w-75 ancho py-3" > col de ancho 75</div>
+				<div class="w-50 ancho py-3" > col de ancho 50</div>
+				<div class="w-25 ancho py-3" > col de ancho 25</div>
+				<div class="w-auto ancho py-3" > col de ancho auto</div>
+				<div class="mw-100 ancho py-3" > col de ancho max-width</div>
+			</div>
+		</div>	
+		<!--d-inline-block: convierte los bloques de columna a linea-->		
+		<div class="row h-100">
+			<h1> Alto </h1>
+			<div class="col-12 " style="height: 150px;">
+				<div class="h-100 col-2 alto d-inline-block " > col de alto 100%</div>
+				<div class="h-75 col-2 alto d-inline-block" > col de alto 75%</div>
+				<div class="h-50 col-2 alto d-inline-block" > col de alto 50%</div>
+				<div class="h-25 col-2 alto d-inline-block" > col de alto 25%</div>
+				<div class="h-auto col-2 alto d-inline-block" > col de alto auto</div>
+				<div class="mh-100 col-2 overflow-auto alto d-inline-block" > col de alto max-height.col de alto max-height. </div>
+			</div>
+		</div>
+
+	</div>
+
+<div class="container"> <h1>--- fin --</h1>  </div>
+<!--////**************************************************-->
+
+<script src="../jquery.js"></script>
+<script src="https://unpkg.com/@popperjs/core@2"></script>
+<script src="../bootstrap4.4.1/js/bootstrap.min.js" ></script>
+	
+</body>
+</html>
+<!--
+  .col- : es para celulares (Estra small) 
+  .col-sm- : es para cel.   (small)
+  .col-md- : es para tables (medium)
+  .col-lg- : es para pc     (large)
+  .col-xl- : es para TV led.(Extra Large)
+(Estra small) < 576px < (small) < 768px < (medium) < 992px < (large) < 12000px< (Extra large) < 
+
+
+color : primary secondary success danger warning info light
+		dark body muted white black white
+	
+-->

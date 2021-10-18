@@ -1,0 +1,66 @@
+/*
+    clip-path: Es una máscara que oculta partes de una caja
+        circle(): dibuja un círculo, puede tener una medida fija, 
+                circle(100px) o podemos especificar un centro con at, 
+                circle(100px at medidaX medidaY | palabrasClave"X" palabrasClave"Y")
+                las unicdaces se usa px, em, %, top , left... y todo los otros.
+
+        ellipse(): dibuja una elipse, funciona igual que el círculo, 
+                pero en este caso tenemos que especificar 2 centros, 
+                el horizontal y el vertical
+
+        inset(): dibuja un borde transparente por dentro de la caja
+            inset(all| Y X | top X bottom | top left bottom right)
+            existe la opción de redondear las esquinas, para ello después de los valores de inset pondremos round
+            inset(*** round all | 
+                top-left & bottom-right top-right & bottom-left |
+                top-left top-right & bottom-left bottom-right
+                top-left top-right bottom-right bottom-left
+            )
+        polygon(): Especifica una serie de puntos (mínimo 3) para definir la zona visible siendo el punto 0 0 la esquina superior izquierda
+        los puntos se especifican por parejas de ejeX y ejeY separados por comas
+        polygon(0 0, 100% 0, 0 100%)
+
+        Generador de clip-path: https://bennettfeely.com/clippy/ en esta pagina estan las figuras para recortar la imagen q se quiere mostrar
+
+*/
+
+    body{
+        background: #333;
+    }
+
+    .box{
+        width: 400px;
+        height: 400px;
+        margin-left: auto;
+        margin-right: auto;
+        background: red;
+        background-image: url(9.png) ;/*paisaje*/
+        background-clip: initial; 
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    .box__item{
+        background: lightcoral;
+        
+        width: 400px;
+        height: 400px;
+         clip-path: circle(100px at  center); /*se dibuja un circulo (radio at centro del radio)*/
+        /* clip-path: ellipse(100px 50px at left top) /*se dibuja una elipce my se espesifica el 
+                    centro en X e Y y luego la posison del centro igula q el circulo*/
+         /*clip-path: inset(20px round 20px 50px 100px 150px) /* aca puedo los lados 
+                    en la primera si pongo un valor, tanto x arriba y de abajo se convegera la figura
+                    .Por otro lado  si toma 2  valores afecatara al eje x e y. con 3 valoeres afecta arriba, 
+                    ala eje X y abajo. con 4 valores uno a cada lado.
+                    finalemnte se redondea las esquinas y sus comandos a poner es lo mismo q el anteriro  */ 
+        /*clip-path: polygon(0% 0%, 0% 100%, 25% 100%, 25% 25%, 75% 25%, 75% 75%, 25% 75%, 25% 100%, 100% 100%, 100% 0%);/**/
+        transition: clip-path .5s;/* para dibujar un poligono se toma 3 puntos para un triangulo con cordenadas cartecianas dando valores a cada eje
+                    se les puede asignar muchos puntos y el orden seria en sentido antiorario*/
+    }
+
+    .box:hover  .box__item{
+        clip-path: ellipse(50% 41% at 50% 50%);
+        
+     }

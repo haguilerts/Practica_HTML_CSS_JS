@@ -1,0 +1,95 @@
+/* Border
+
+----border-width
+        px|em|rem|%|....
+
+----border-style
+        none(vacio)---    hidden(oculto)---dotted(punteado)
+        dashed(discontinuo)---solid(sólido)---double(doble)
+        groove(ranura)---ridge(cresta)---inset(recuadro)
+        outset(inicio)---initial(inicial)---inherit(heredar);
+
+        *Estas medidas dependen del navegador*
+        thick (ancho)
+        medium (medio)
+        thin (fino)
+            
+----border-color
+        css native|rgb|rgba|hsl|hsla|hexadecimal|transparent
+
+    border-top-(width | style | color)
+    border-right-(width | style | color)
+    border-bottom-(width | style | color)
+    border-left-(width | style | color)
+*/
+
+[class*=box] { /* Seleccionar los elementos que 
+    tienen ese atributo y contengan ese valor*/
+ 
+    width: 200px;
+    height: 200px;
+    margin: 2em;
+}
+/*  */
+.box1 {
+    background: yellowgreen; /*color de la caja*/
+    border: 10px solid red; /*gruesor y color del borde*/
+    border-top-width: 200px;/* borde de arribacon su gruesos*/
+    border-top-color: transparent;/* el borde puesto de arriba 
+    874lo hace trasparente consiguiendo ese efecto*/
+}
+
+.box2 {
+    background: lightseagreen;/*color*/
+    border-left-width: 10px; /*ancho del vorde lateral*/
+    border-left-style: dotted; /*borde punteado */
+   
+}
+
+.box3 {
+    background: lightcoral; /*color*/
+    border: 5px dashed blue; /* linea discontinuo en el contorno 
+    color azul*/
+}
+
+.box4 {
+    background: yellowgreen;
+    border: 5px double blue;/* doble linea  en el contorno 
+    color azul*/
+}
+
+.box5 {
+    background: lightseagreen;
+    border: 15px groove red;/* ranurade linea en el contorno 
+    color rojo*/
+}
+
+.box6 {
+    background: lightcoral;
+    border: 20px ridge red;/*linea cresta en el contorno 
+    color rojo*/
+}
+
+.box7 {
+    background: yellowgreen;
+    border: 25px inset red;/*linea de recuadro */
+}
+
+.box8 {
+    background: lightseagreen;
+    border: 20px outset red;/*linea inicio*/
+}
+
+/* initial es la propiedad que tuviera por defecto, en este caso es none */
+
+.box9 {
+    background: lightcoral;
+    border: 20px initial blue;
+}
+
+/* inherit es la propiedad heredada, si el padre tuviera border pues cogería ese estilo */
+
+.box10 {
+    background: yellowgreen;
+    border: 50px inherit blue;
+}

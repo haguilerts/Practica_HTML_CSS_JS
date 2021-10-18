@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrucel</title>
+    <style>
+        *{
+            margin: 0; padding: 0;outline: 0; 
+            box-sizing: border-box;
+        }
+        html{  font-family: Arial, sans-serif;  }
+        img{  width: 100%; height: 100%;  }
+        .container{
+            width: 100%; height: 780px;
+            position: relative;
+        }
+        .btn{
+            font-size: 30px; width: 70px; height: 70px;
+            line-height: 70px; border-radius: 50%;
+            background-color: rgba(0, 0, 0, .7);
+            text-align: center; font-weight: bold;
+            position: absolute; color: #fff; 
+            box-shadow: 0 0 10px rgba(255, 255, 255, .6);   
+        }
+        .btn:hover{
+            cursor: pointer;
+            transform: scale(1.2,1.2);
+        }
+        .atras{
+            left: 2%;
+            top: calc(50% - 70px);
+        }
+        .adelante{
+            right: 2%;
+            top: calc(50% - 70px);
+        }
+    </style>
+</head>
+<body>
+    <div class="contenedor">
+        <div class="atras btn"> Atras </div>
+        <img src="img/1.jpg" alt="img" id="imagen">
+        <div class="adelante btn">  Adelante </div>
+    </div>
+    <script>
+        var imgs=['img/1.jpg', 'img/2.jpg', 'img/3.jpg','img/4.jpg'],
+         cont = 0;
+         console.log(imgs)
+         let contenedor = document.querySelector('.contenedor');
+             carrousel(contenedor);
+         function carrousel(c){
+            c.addEventListener('click',e=>{
+                let atras= c.querySelector('.atras'),
+                    adelante=c.querySelector('.adelante'),
+                    img=c.querySelector('img'),
+                    tgt=e.target;
+                if (tgt== atras) {
+                    if (cont >0) {
+                        img.src= imgs[cont - 1];
+                        cont--;
+                    }else{
+                        img.src= imgs[imgs.length - 1];
+                        cont=imgs.length - 1;
+                    }
+                } else if(tgt== adelante){
+                    if (cont < imgs.length -1) {
+                        img.src= imgs[cont + 1];
+                        cont++;
+                    }else{
+                        img.src= imgs[0];
+                        cont=0;
+                    }
+                }
+
+            })
+         }
+
+         document.addEventListener("DOMContentLoaded",()=>{
+            
+         })
+    </script>
+</body>
+</html>

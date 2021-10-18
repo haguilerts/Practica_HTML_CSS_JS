@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="../bootstrap4.4.1/css/bootstrap.min.css">
+    <style >
+    	[class^="col"]{
+		  background: cyan;
+		  border:1px solid black;
+		  text-align-last: center;
+		} 
+		.row{
+		  background: red;
+		  height: 100px;
+		  margin-top: 10px;
+		} 
+		.columna{
+		  background: #149911;
+		}
+		.columna1{
+		  background: yellow;
+		}
+    </style>
+	<meta charset="UTF-8">
+	<title>mi segunda  forma de alinear</title>
+</head>
+<body>
+	<!--////**************************************************-->
+    <div class="container"> <h1>---inicio--</h1>  </div>
+
+    <!--////**************************************************-->
+    <div class="container"> <h1>--- alinear columnas ----</h1>  </div>
+	<!-- align-items-center : centrea el texto | start : inicio | end : final 
+			funciona a loa vertical-->
+    <div class="container">
+      <div class="row fila align-items-start" >
+        <div class="col-6 columna">col-1</div>
+        <div class="col-6 columna">col-2</div>
+      </div>
+      <div class="row fila align-items-center" >
+        <div class="col-6 columna">col_A</div>
+        <div class="col-5 columna">col_B</div>
+      </div>
+      <div class="row fila align-items-end" >
+        <div class="col-6 columna">col_a</div>
+        <div class="col-6 columna">col_b</div>
+      </div>
+    </div>
+    <!-- align-self-center : centrea el texto | start : inicio | end : final -->
+    <div class="container">
+      <div class="row" >
+        <div class="col-4 columna align-self-start">col-1</div>
+        <div class="col-4 columna align-self-center">col-2</div>
+        <div class="col-4 columna align-self-end">col-2</div>
+      </div>     
+    </div>
+    <!-- justify-content-center : centrea los bloques | start : inicio | end : final -->
+    <div class="container">
+      <div class="row fila justify-content-center" >
+        <div class="col-2 columna1 ">col-1</div>
+        <div class="col-2 columna1 columna align-self-center">col-2</div>
+        <div class="col-2 columna1 ">col-2</div>
+      </div>     
+    </div>
+    <div class="container">
+      <div class="row fila justify-content-around" >
+        <div class="col-2 columna1 ">col-1</div>
+        <div class="col-2 columna1 ">col-2</div>
+        <div class="col-2 columna1 ">col-2</div>
+      </div>     
+    </div>
+    <div class="container">
+      <div class="row fila justify-content-between" >
+        <div class="col-2 columna1 ">col-1</div>
+        <div class="col-2 columna1 ">col-2</div>
+        <div class="col-2 columna1 ">col-2</div>
+      </div>     
+    </div>
+
+
+<div class="container"> <h1>--- fin --</h1>  </div>
+<!--////**************************************************-->
+
+<script src="../jquery.js"></script>
+<script src="https://unpkg.com/@popperjs/core@2"></script>
+<script src="../bootstrap4.4.1/js/bootstrap.min.js" ></script>
+	
+</body>
+</html>
+<!--
+  .col- : es para celulares (Estra small) 
+  .col-sm- : es para cel.   (small)
+  .col-md- : es para tables (medium)
+  .col-lg- : es para pc     (large)
+  .col-xl- : es para TV led.(Extra Large)
+(Estra small) < 576px < (small) < 768px < (medium) < 992px < (large) < 12000px< (Extra large) < 
+-->

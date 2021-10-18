@@ -1,0 +1,53 @@
+/* 
+Sitios gratuitos para fuentes
+    https://www.dafont.com/es/
+    https://www.1001fonts.com/
+
+    Analizar fuentes web
+        whatFont
+*/
+.paragraph{
+			color: red;
+			font-family: 'Baloo Chettan 2', cursive;
+}
+.title{
+	color:blue;
+	font-family: 'Baloo Chettan 2', cursive;
+	font-family: 'Montserrat', sans-serif;
+}
+.cursiva{
+	color: cyan;
+	font-family: 'Baloo Chettan 2', cursive;
+	font-family: 'Montserrat', sans-serif;
+	font-family: 'Lobster', cursive;
+}
+@font-face {/* esa es la otra forma de usar import y todo lo q esat x debajo lo combierte es eso*/
+    src: url("fonts/Blazed.ttf");/*esta es la direccion de la fuente */
+    font-family: 'firmas';/* esta es una direccion para usar el importa a las otras clases*/
+}
+
+	.f {
+		color:blue;
+	    font-family: firmas, serif;
+	}
+	.h{
+		color:blue;
+	    font-family: firmas;
+	}
+@font-face{
+	src: url("codigoBarra/mrvcode39extma.ttf");
+	font-family: codigo;
+}
+	.codigo{
+		color: red;
+		font-family: codigo;
+	}
+	
+@font-face{
+	src: url("app/ScanmeQR.ttf");
+	font-family: sCam;
+}
+	.fuente{
+		font-family: sCam;
+		font-size: 2em;
+	}

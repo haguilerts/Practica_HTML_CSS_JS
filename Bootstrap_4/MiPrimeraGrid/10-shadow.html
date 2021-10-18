@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="../bootstrap4.4.1/css/bootstrap.min.css">
+    <meta charset="UTF-8">
+	<title>overflow </title>
+    <style >
+    	
+		.row{
+		  background: white;	
+		  padding: 4px;	  
+		} 
+		/*[class^="col"]{
+		  background: cyan;
+		  border:1px solid black;
+		  text-align-last: center;
+		  max-height: auto;
+		} */
+		
+			
+    </style>		
+</head>
+<body >
+	    
+<!--////************* https://unsplash.com/s/photos/paisajes *************************************-->	
+<!--////**************************************************-->
+<div class="container"> <h1>--- shadow sobra--</h1>  </div>
+	
+	<div class="container">
+		<div class="row pt-3">
+				<div class="col-12 d-block">
+					<div class="p-3 bg-light no-shadow mb-2">
+						no shawdon no sombra
+					</div>
+					<div class="p-3 bg-white shadow-sm mb-2">
+						shawdon sm 
+					</div>
+					<div class="p-3 bg-white shadow mb-3">
+						shawdon 
+					</div>
+					<div class="p-3 bg-white shadow-lg mb-5 ">
+						shawdon lg
+					</div>		
+				</div>
+			</div>
+		</div>
+	</div>
+<div class="container"> <h1>--- text --</h1>  </div>
+<!--////**************************************************-->
+<div class="container">
+		<div class="row">
+			<div class="col-12 bg-secondary p-3 my-1">
+				<p class="text-white p-0">Y el impulso dado escribió en la decisión. Mañana el lote de prueba de zanahoria chile fermentación. Pero hasta que la actividad odio</p>
+			</div>        
+			<div class="col-12 bg-primary p-3 my-1"> text-left/center/
+				<p class="text-warning p-0 text-left">Y el impulso dado escribió en la decisión. Mañana el lote de prueba Y el impulso dado escribió en la decisión. Mañana el lote de prueba</p>
+				<p class="text-white p-0 text-center">Y el impulso dado escribió en la decisión. Mañana el lote de prueba Y el impulso dado escribió en la decisión. Mañana el lote de prueba</p>
+				<p class="text-warning p-0 text-right">Y el impulso dado escribió en la decisión. Mañana el lote de pruebaY el impulso dado escribió en la decisión. Mañana el lote de prueba</p>
+			</div>
+			<div class="col-12 bg-primary p-3 my-1"> text-sm/md/lg/xl-left/center/right
+				<p class="text-warning p-0 text-sm-left text-md-center text-lg-right">Y el impulso dado escribió en la decisión. Mañana el lote de prueba Y el impulso dado escribió en la decisión. Mañana el lote de prueba</p>
+				<p class="text-white p-0 text-sm-left text-md-center text-lg-right">Y el impulso dado escribió en la decisión. Mañana el lote de prueba Y el impulso dado escribió en la decisión. Mañana el lote de prueba</p>
+				<p class="text-warning p-0 text-sm-left text-md-center text-lg-right">Y el impulso dado escribió en la decisión. Mañana el lote de pruebaY el impulso dado escribió en la decisión. Mañana el lote de prueba</p>
+			</div>
+			<div class="col-2 bg-primary p-3 my-1 "> 
+				<p class="text-warning p-0 text-white text-wrap">el contexto no se sale del contenedor</p>			
+			</div>
+			<div class="bg-primary p-3 my-1 ml-2" style="width: 20px"> 
+				<p class="text-warning p-0 text-white text-wrap">el contexto NO se sale del contenedor</p>			
+			</div>
+			<div class="bg-primary p-3 my-1 ml-5" style="width: 70px"> 
+				<p class="text-warning p-0 text-white text-nowrap">el contexto SI se sale del contenedor/p>			
+			</div> 
+			<div class="col-12  bg-light">
+			   <p class=" col-3 bg-secondary text-truncate text-white">no se ve todo pero con un bootom muestra todo el contenido</p> 
+		  	</div>
+		  	<div class="col-6  bg-primary text-white my-1  "> hello nunca mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm...........................................	   
+		  	</div>
+		  	<div class="col-8  bg-primary text-white my-3 text-truncate "> 
+		  		hola nunca cuerta mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm...........................................	   
+		  	</div>
+		  	<div class="col-8  bg-primary text-white my- "> 
+		  		<p class="text-lowercase">TODO MINUSCULA</p>
+				<p class="text-uppercase">todo mayuscula</p>
+				<p class="text-capitalize">comienzo de palabras en mayuscula</p>
+		  	</div>
+			<div class="col-8  bg-info text-white my- "> 
+		  		<p class="font-weight-bold">texto grueso</p>
+				<p class="font-weight-bolder">texto mas gruezo</p>
+				<p class="font-weight-normal">texto normAL</p>
+				<p class="font-weight-light"> texto desgado</p>
+				<p class="font-weight-lighter">texto muy delgado</p>
+				<p class="font-italic">texto inclinado</p>
+				<p class="text-monospace">texto cuadrado</p>
+				<p class="text-white">
+				  <a href="#" class="text-reset">link con linea  inferior</a>.
+				</p>
+				<p class="text-white">
+				  <a href="#" class="text-decoration-none">borra la linea inferior</a>.
+				</p>
+				<p>nin monospace</p>
+				<p class="text-monospace">con monospace</p>
+
+		  	</div>
+		  	<div class="col-md-12">
+		  		<span class="align-baseline">lineaDeReferencia</span>
+				<span class="align-top">arriba</span>
+				<span class="align-middle">medio</span>
+				<span class="align-bottom">abajo</span>
+				<span class="align-text-top">text-top</span>
+				<span class="align-text-bottom">text-bottom</span>
+		  	</div>
+		  	<div class="col-md-12 bg-info">
+		  		<table style="height: 100px;">
+				  <tbody>
+				    <tr>
+				      <td class="align-baseline">baseline</td>
+				      <td class="align-top">top</td>
+				      <td class="align-middle">medio</td>
+				      <td class="align-bottom">abajo</td>
+				      <td class="align-text-top">text-top text-top text-top text-top</td>
+				      <td class="align-text-bottom">text-bottom text-bottom text-bottom text-bottom</td>
+				    </tr>
+				  </tbody>
+				</table>
+		  	</div>
+		    <div class="col-md-12 bg-white">
+		    	<div class="visible bg-primary">visible</div>
+				<div class="invisible bg-info"> no se ve nada Invisible</div>
+		    </div>
+		</div>
+	</div>
+<div class="container"> <h1>--- fin --</h1>  </div>
+<!--////**************************************************-->
+
+<script src="../jquery.js"></script>
+<script src="https://unpkg.com/@popperjs/core@2"></script>
+<script src="../bootstrap4.4.1/js/bootstrap.min.js" ></script>
+	
+</body>
+</html>
+<!--
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+				
+			</div>
+		</div>
+	</div>
+  .col- : es para celulares (Estra small) 
+  .col-sm- : es para cel.   (small)
+  .col-md- : es para tables (medium)
+  .col-lg- : es para pc     (large)
+  .col-xl- : es para TV led.(Extra Large)
+(Estra small) < 576px < (small) < 768px < (medium) < 992px < (large) < 12000px< (Extra large) < 
+
+color : primary secondary success danger warning info light
+		dark body muted white black 
+-->

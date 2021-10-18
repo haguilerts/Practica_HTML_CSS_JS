@@ -1,0 +1,53 @@
+
+body{
+	background-color: gold ; /** color de fondo : green **/ 
+
+	background-image: url("img2/j1.jpg"); /** **/
+	background-size: cover; /** ajusata la pantalla pero te mueves con la foto**/
+	background-attachment: fixed; /** hace q la imagen no se mueva junto con las letras, cuando deslizamos para abajo o arriba*/
+	background-repeat: no-repeat; /** hace q no se repita las imagens simultanias**/
+
+}
+
+h1{ /** h1 pertenece al los titulos **/
+	color: blue;  /** # 6200ee**/
+	/** pagina de los colores;
+	   https://www.w3schools.com/colors/colors_names.asp
+	   se puede poner los coleres con el nombre en ingles o x codigo en exadecimal
+	  **/
+	  font-size: 3em; /** 16 pixel=1em -- es tamaño de letra**/
+	  font-style: normal; /**tipo de letra a 90°**/
+	  font-variant: small-caps; /** la primera palabra lo combierte en malluscula**/
+
+	  background-color: red ; /** color de fondo : green **/ 
+}
+
+h2{
+	color: red ; /** rojo **/
+	   font-family: arial;  /** tipo de letra **/
+	   font-size: 2em;
+	   font-style: italic; /**tipo de letra inclinada 60° **/
+
+}
+h3{
+	color: yellow ; /** cian **/
+
+	font-family: verdana; /** tipo de letra **/
+	font-weight: normal; /** mas fino la letra **/
+}
+p{
+	color: #8c8c00;/** maron **/
+	 font-size: 1.5em;
+	font-family: "times new roman"; /** si no ponemos nada la maquina lo 
+									 toma x este tipoi de letra, en 
+									este caso no cambia nada**/
+	font-weight: bold; /** mas gruesa la letra **/
+}
+a{
+	 background-color: yellow ; /** color de fondo : green **/ 
+	 text-decoration: none; /** quita el subrayado **/
+}
+a:hover{ /** si utilizo "visited" en ves de "hover" me selecciona que ya fue todo visitado**/
+	color: Aqua; 
+	font-style: italic; /**tipo de letra inclinada 60° **/
+}

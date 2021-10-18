@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>formulario 4 atributos</title>
+</head>
+<!--form:
+	fieldset:
+
+	atributos boelean:
+		required: hace q un campo sea obligatorio para llenarlo.
+		disable: desacativar la interseccion con el campo( osea no se puede rellenar)
+		checked: marca un radio | opcion por defecto 
+		selected: marca una opcion por defecto  como una seleccion
+		autofocus: pone el foco automatico en un campo seleccionado.
+		readonly: hace q el campo sea solo de lectura
+	atributos boelean:
+		maxlenght/minlength: determina la cantidad minima y maxima de caracteres en un campo.
+		min/max: detenrmina el minimo y el maximo en los campos numericos 
+		autocomplete=on|off(formulario):  permite al navegador autocompletar los datos que tiene almacenados
+		placeholder: establese un valor de inicio y se borra al introducir informacion.
+
+-->
+<body>
+		<form action="#" autocomplete="on">
+			<fieldset>
+				<legend>datos personales</legend>
+				<label for="name"> nombre </label>
+					<input type="text" id="name" required=""  maxlength="5">
+				<label for="apell"> apellido </label>
+					<input type="text" id="apell" required minlength="5">
+				<label for="edad"> Eddad </label>
+					<input type="number" id="edad" min="18" max="20">
+				<label for="apodo"> apodo </label>
+					<input type="text" id="apodo" disabled="">
+				<label for="dni"> dni </label>
+					<input type="number" id="dni" autofocus="">
+				<label for="lec"> lectura </label>
+					<input type="text" placeholder="solo se puede leer" id="lec" readonly="" >
+			</fieldset>
+				<input type="radio" name="sex" checked="12">hombre
+				<input type="radio" name="sex">mujer
+				<button> enviar</button>
+
+			<select>
+				<option>html</option>
+				<option selected="">css</option>
+				<option>js</option>
+			</select>
+		</form>
+
+
+
+
+</body>
+</html>

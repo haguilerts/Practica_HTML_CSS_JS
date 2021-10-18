@@ -1,0 +1,250 @@
+/* 
+Flexbox:  Propiedad flex es un shorthand que engloba las siguientes propiedades.
+        Todas las medidas se establecen en función del espacio disponible en el contenedor.
+        Todas las propiedades van en función del MAIN-AXIS.
+
+    display:flex(=> elem.Bloque)
+        Convierte el contenedor en un contexto para flexbox y hace que el contenedor sea un elemento de bloque para los elementos que lo rodean
+    display:inline-flex(=> elem.Linea)
+        Convierte el contenedor en un contexto para flexbox y hace que el contenedor sea un elemento en línea para los elementos que lo rodean
+
+    flex-direction: row(default) | row-reverse | column | column-reverse
+        Modifica la dirección y cual es el eje principal.
+        Por defecto es row (horizontal de izquierda a derecha)
+        row-reverse (horizontal de derecha a izquierda)
+        column vertical de arriba abajo
+        column-reverse vertical de abajo arriba
+
+    flex-wrap: no-wrap(default) | wrap | wrap-reverse
+        Controla si los elementos saltarán de línea o no
+        no-wrap es el valor por defecto, un contenedor flex va a hacer que todos los elementos se queden en una línea si no le especificamos lo contrario
+        wrap hace que los elementos que no quepan en una línea (manteniendo sus dimensiones, si las tuvieran) salten a la linea inferior.
+        wrap-reverse hace lo mismo que wrap pero en lugar de hacer que salten a la línea inferior, hace que salten a la linea superior. 
+********************************************************************************************************************************************************
+Flexbox
+    Alineamiento
+    Estas propiedades para alinear se aplican SIEMPRE al flex-container
+
+    Existen propiedades para el main-axis y para el cross-axis
+    *main-axis:
+        .justify-content: flex-start(default) | center | space-between | space-around | space-evenly | flex-end
+
+        .flex-start: alinea los elementos al principio del main axis
+        .center: centra los elementos en la mitad del main axis
+        .flex-end: alinea los elementos al final del main axis
+
+        .space-between: distribuye los items a la misma distancia y no deja espacio exterior ni el primer ni el último flex-end.        
+        .space-around:  distribuye los items a la misma distancia y deja un espacio exterior en el primero y en el último flex-item.
+        .space-evenly:  distribuye los items y los espacios exteriores del primer y último 
+        .flex-item: dejando la misma distancia entre todos.
+    *cross-axis
+        align-items: Una sola línea.
+            flex-start | center | flex-end | stretch(default) | baseline
+        align-content:varias líneas
+            flex-start | center | flex-end | stretch(default) | baseline
+
+        align-self: Se aplica al flex-item. Sirve para alinear un elemento en concreto en el cross-axis
+
+    TRUCO EXTRA: Al utilizar auto con la propiedad margin lo que sucede es que el elemento se va al lado contrario del margen que dimos, si ponemos margin:auto el elemento se centra completamente, tanto vertical como horizontalmente
+
+********************************************************************************************************************************************************
+        flex-grow:  Establece qué hacer cuando hay espacio sobrante. Cuantas divisiones coge el elemento. El valor es un entero desde 0 hasta n o auto.
+        flex-shrink:Establece qué hacer cuando no hay espacio suficiente. Cuantas divisiones pierde el elemento. El valor es un entero desde 0 hasta n.
+        flex-basis: Establece cuanto tiene que ocupar el item antes de encojer o extenderse. Flex basis prevalece ante width si el main-axis es horizontal o ante height si el main-axis es vertical. El valor es un entero desde 0 hasta n
+
+    Los valores de flex son:
+        Por defecto es 0 1 auto
+        flex:auto; equivale a 1 1 auto;
+        flex:none; equivale a  0 0 auto;
+        flex: flex-grow(obligatiorio) flex-shrink(opcional) flex-basis(opcional);
+
+
+    Order: Establece qué orden ocupará el elemento en el contenedor flex. El valor es el "peso" respecto a los valores que tengan los otros elementos. Por defecto es 0
+
+    Extra:
+        Existe un shorthand para flex-direction y flex-wrap. flex-flow: flex-direction flex-wrap. flex-flow: column wrap;
+****************************************************************************************************************************************
+        */
+
+    .flex-container {/* cambia las direcciones,row(default) | row-reverse | column | column-reverse*/
+        background-color: #FCA17D;
+        padding: .5em 0;
+        display: flex;/*hace sus dimenciones internos al disminuir la pantalal se ajusten para exederce */
+            flex-direction: row;/*este es lo normal x defecto con los ejes: derecha(+X) */
+            flex-direction: column;/* abajo(+Y) */
+            flex-direction: row-reverse; /*inviero sus direcciones, isqueirda(+X) */
+            flex-direction: column-reverse; /*inviero sus direcciones, arriba(+Y) */
+    }
+    .flex-container2 {/* no-wrap(default) | wrap | wrap-reverse*/
+        margin-top: 2em;
+        background-color: rgb(187, 85, 44);
+        padding: .5em 0;
+        display: flex;
+            flex-wrap: wrap;/*aca los cuadros ya no se ajusta a la pantalla ya q cada cuadro se desplasa abajo */
+            flex-wrap: wrap-reverse;/*invirto el sentido */
+       
+    }
+
+        .flex-item {/**/
+            width: 50px;
+            height: 50px;
+            margin: .5em;
+            line-height: 30px; /*lo centrea el testo vertical*/
+            text-align: center; /*lo centrea el testo horizontal*/
+            color: aliceblue;            
+            background-color: #9A348E;
+            
+        }
+/*--------------------------alinamiento-----------------------------------------------------*/
+        
+    .flex-container3 {
+        background-color: #FCA17D;
+        height: 400px;       
+        display: flex;
+            margin-bottom: 1em;
+           /* justify-content: center;/*centrea el los cuadros internos manteniedo su distacia */
+           /* justify-content: space-between;/*centrea el los cuadros internos manteniedo su distaciaentre ellos */
+           /* justify-content: space-around;/*sentrea los cuadros de forma uniforme entre ellos*/
+            /*justify-content: space-evenly;/*sentrea los cuadros de forma uniforme entre todos*/
+            /*justify-content: center;/*centreado*/
+        /*align-items: flex-start;/*esto viene x defecto*/
+        /*align-items: center;/*centrea respecto al bloque grande de forma vertical*/
+        /*align-items: stretch;/*esto viene x defecto*/
+        flex-wrap: wrap;
+            align-content: flex-start;/*inicial*/
+            align-content: center;/*centreado*/
+            align-content: flex-end;/*final*/
+
+    }
+        .flex-item3 {/*
+            width: 50px;
+            height: 50px;
+            margin-bottom: auto;
+            margin-left: auto;
+            color: aliceblue;
+           
+            text-align: center;
+            line-height: 50px;*/
+            width: 50px;
+            height: 50px;
+            margin: .5em;
+            color: aliceblue;
+            background-color: #9A348E;
+            text-align: center;
+            line-height: 50px;
+
+        }
+/*-----------------caja con imagenes--------------------*/
+     .box {
+         margin-top: 3em;;
+        border: 1px solid black;
+        width: 100%;
+        height: 600px;
+        display: flex;
+        align-items: center;/*centrea el texto*/
+    } 
+
+     .box img {
+        max-width: 50%;/*redusco el tamanio del tamanio de la foto*/
+    } 
+/*-----------------caja tablas--------------------*/
+
+   .prices {
+        margin-top: 3em;
+        display: flex;
+        align-items: flex-start;/*tablas los alinea*/
+        /*align-items: baseline; /*texto alineado*/
+        height: 600px;
+        border: 1px solid black;*/
+    }
+
+        .prices__item {
+            width: 25%;
+            height: 300px;
+        }
+
+        .prices__item:first-child {
+            background: peru;
+        }
+
+        .prices__item:nth-child(2) {
+            background: green;
+            line-height: 20px;
+            align-self: flex-start ;
+            align-self: center;/*se centrea respectoa la caja principial*/
+        }
+
+        .prices__item:nth-child(3) {
+            background: indianred;
+            line-height: 15px;
+        }
+
+        .prices__item:nth-child(4) {
+            background: lightgreen;
+            line-height: 50px;
+        } 
+    /*---------- extra -----------------*/
+
+    .flex-container4{
+        margin-top: 3em;
+            background-color: #FCA17D;
+            height: 400px; 
+            width: 200px;      
+            display: flex;            
+            flex-wrap: wrap;
+    }
+    
+    .flex-item4 {/*solo funciona con contenedores flex*/
+        /*margin: auto;/*lo centre tanto como vertical e horizontal*/
+            margin-bottom: auto;/*esto lo q haces es empujar al maximo al extremo*/
+            margin-left: auto;/*esto lo q haces es empujar al maximo al extremo*/
+        width: 50px;
+        height: 50px;
+        color: aliceblue;
+        background-color: #9A348E;
+        text-align: center;
+        line-height: 50px;
+
+    }
+/*---------------Flex: grow- shrink- basis -flow - order----------------------------------------------------------------*/
+
+.flex-container5 {
+    background-color: #FCA17D;
+    height: 300px;
+    width: 400px;
+    display: flex;
+    /*flex-direction: column;/* se lo ubica de forma vertical*/
+}
+
+    .flex-item5 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 50px;/**/
+        /*width: 250px;*/        
+        height: 50px;
+       /* height: 250px;/* cambio su tamanio para la vertical y ver el efecto*/
+        color: aliceblue;
+        background-color: #9A348E;
+        order: 1;
+
+    }
+    .flex-item5:nth-child(2) {/*esta es la posicion 2 (1)*/
+        background: lightseagreen;
+        /*flex-grow: 1;/* 1) rellena el espacio sobrante dentro del bloque */
+        /*flex-shrink: 2;/*se encoge mas q los otros*/
+        order: 2;
+    }
+    .flex-item5:nth-child(3) {/*posicion 3 (2) del html */
+        background: lightskyblue;
+        /*flex-grow: 3;/* 2) loq hace es q es rellenar los espacios pero al cambiar su valor el tamanio se incrementa un pco mas con respecto al otro q tambien rellena*/
+        /*flex-basis: 100px;/*aca solo expando el tamanio asignado pero si exedo empuja a los otros reducioendo su tamanio. por otro lado pesa mas q la prop.Width(ancho)*/
+        /*flex-shrink: 0;/**/
+        /*flex:1 0 auto;/*=> ubicacion: grow-shrink-basis. recomendado*/
+        order: 3;/*el q tiene mas peso va a final de todo  y sucesivamente con los otros*/
+    }
+    .flex-item5:first-child { /*posion 1 (5) del html*/
+        background: darkgoldenrod;
+       order: 4;/*los ordea */ 
+        
+    }

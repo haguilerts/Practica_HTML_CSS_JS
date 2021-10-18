@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title> Metodo BEN CSS</title>
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="estilo.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="../bootstrap-5.0.0-beta1-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../myEstilo.css">
+
+</head>
+<!-- -->
+
+<body>
+    <!-- bloque -->
+    <h1 class="main-title">Metodología BEM</h1>
+
+    <header class="header">
+        <nav>
+            <ul class="menuSup">
+                <!-- bloque -->
+                <li class="menuSup__list">
+                    <!-- elementos -->
+                    <a class="menuSup__list--items" href="#">Item 1 </a>
+                    <!-- elementos -->
+                </li>
+                <li class="menuSup__list">
+                    <!-- elementos -->
+                    <a class="menuSup__list--items menuSup__link--active" href="#">Item 2</a></li>
+                <!-- modificador -->
+                <li class="menuSup__list">
+                    <a class="menuSup__list--items" href="#">Item 3 </a> </li>
+                <li class="menuSup__list">
+                    <a class="menuSup__list--items" href="#">Item 4 </a> </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main h-auto">
+        <section class="row">
+            <article class="col-12 col-lg-4">
+                <h4>
+                    *ul <br> **li <br> ***a<br>
+                    <hr>
+                </h4>
+                <h5>-Los BLOQUES(similar a clases) se suelen denominar con una sola palabra o con dos palabras separadas con un guion si puede existir conflicto de estilos.
+                </h5>
+                <small class="mb-2 fs-5 text-center">ul / .menuSup <br></small>
+
+                <h5>-Los ELEMENTOS(similar a atributos) se nombran con el nombre del bloque al que pertenecen y su nombre con dos guiones bajos</h5>
+                <small class="mb-2 fs-5 text-center">li / .menuSup__list</small>
+
+                <h5>-Los MODIFICADORES(similar a metodos) se nombran con el nombre del bloque al que pertenecen y su modificador con dos guiones medios </h5>
+                <small class="mb-2 fs-5 text-center">a / .menuSup__list--items<br>
+                  </small>
+            </article>
+            <aside class="col  text-center">
+                <img class="w-100 " src="BEM-1.jpg" alt="..">
+                <img class="w-100 " src="BEM-2.jpg" alt="..">
+            </aside>
+        </section>
+    </main>
+
+</body>
+
+</html>

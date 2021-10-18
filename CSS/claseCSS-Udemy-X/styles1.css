@@ -1,0 +1,103 @@
+/*
+https://developer.mozilla.org/es/docs/Web/CSS/radial-gradient
+
+-Un degradado es una transición entre un color y otro. El navegador calculará todos los pasos intermedios entre los colores del degradado
+
+-Es un valor de background-image
+-Existen dos tipos de degradados: lineales y radiales
+
+*Degradados lineales:
+    linear-gradient([direction], color-1, color-2....)
+    background-image: linear-gradient(red, blue);
+    La dirección es opcional, se puede establecer con un ángulo(20deg, 190deg...) 
+        o estableciendo la dirección del degradado con 
+        "to top | right | bottom | left | top left | top right| bottom left | bottom right"
+    background-image: linear-gradient(to right, red, blue);
+
+    Si no establecemos paradas de color, el navegador dividirá el espacio 
+        disponible entre los colores que tenga que pintar.
+    2 colores 0% 100%
+    3 colores 0% 50% 100%
+
+    Para establecer las paradas se puede usar cualquier medida, px, em, %...
+    si las paradas/inicios empiezan en el mismo sitio se genera un corte sólido
+    background-image: linear-gradient(red 50%, blue 50%);
+
+    linear-gradient(direction, color-1 stop, color-2 start [stop]...)
+    background-image: linear-gradient(red 50%, blue 50% 70%, green 75%);
+
+Degradados radiales
+    Funcionan de una forma similar a los degradados lineales.
+    background-image: radial-gradient([shape], red, blue);
+    background-image: radial-gradient(red, blue);
+
+    Por defecto, shape se ajustará al tamaño de la caja, pero podemos establecer si queremos un círculo o una elipse y definir el radio o los radios.
+    background-image: radial-gradient(circle 100px, red, blue);
+     background-image: radial-gradient(ellipse 100px 50px, red, blue);
+     Si no establecemos un punto de origen, el punto 0 0 será el centro del elemento. Para establecer el punto de origen podemos hacerlo en medidas o con palabras clave.
+     Con la palabra "at" establecemos el punto de origen. Los valores que acepta son:
+     top | right | bottom | left | center | closest-side | closest-corner | farthest-side | farthest-corner
+     background-image: radial-gradient(circle 100px at top left, red 50%, blue 50%);
+     si establecemos un solo valor, el segundo por defecto será center
+     background-image: radial-gradient(circle 100px at top, red 50%, blue 50%);
+
+*/
+
+    .box1 {/*cuadro lineal*/
+        text-align: center;
+        width: 200px;
+        height: 200px;
+        border: 3px solid black;
+        margin: 2em auto;
+       /* background-image: linear-gradient(red, blue, yellow);/*de arriba abajo */
+     /*background-image: linear-gradient(to bottom, red,yellow, blue );/*va de derecha a isquierda arriba*/
+    /* background-image: linear-gradient(to top, red, blue, yellow);/*va de abajo arriba*/
+    /* background-image: linear-gradient(to top right,red, yellow,blue );/*va en una esquina*/
+     /*background-image: linear-gradient( red 10%, yellow 40%,blue 70% 80%, yellow );/*distribulle el colore en %, origen hasta destino.*/  
+     /*background-image: linear-gradient( red 10%, blue 10% 70%, yellow );/*otra forma, distribulle el colore en %.*/  
+        
+    background-image: radial-gradient(ellipse 100% 50% at center, red 15% 20%, transparent 30% 50%, blue 60%, yellow);/*elipce centreado, trasparente y dos colores*/
+    }
+    .box2{/*cuadro angular*/        
+        width: 200px;
+        height: 200px;
+        background: lightcoral;
+            clip-path: circle(100px at  center); /*dibuja un circulo*/
+        border: 5px solid black;
+        margin: 2em auto;
+        /*background-image: linear-gradient(45deg, red, blue, yellow);/*crese en sentido antihorario, comiensa de abajo*/
+        /*background-image: radial-gradient( red, blue, yellow);/*crese en sentido antihorario, comiensa de abajo*/
+        /*background-image: radial-gradient( circle 100px,red, blue, yellow);/*se le incluye el radio*/
+        /*background-image: radial-gradient( circle 100px,red 20%, blue 70%, yellow);/*se le incluye el radio*/
+        background-image: radial-gradient(  circle 200px at top right, red 40%, blue 70%, yellow);/*se le incluye el radio, posion y distorcion*/
+    }
+    .box3 {/*lineal repeticion*/
+        width: 250px;
+        height: 250px;
+        border: 3px solid black;
+        margin: 2em auto;
+       /* background-image: linear-gradient(45deg, red 50%, blue 50%);/**/
+        /*background-size: 50px 50px; /*esto hace q se repita dandole el tamanio a cada cuadro*/
+       /* background-image: repeating-linear-gradient(60deg,
+            red 0,
+            red 10px,
+            blue 10px,
+            blue 20px,
+            yellow 20px,
+            yellow 30px);/*hace q se repita auntomaticamente de forma lineal a cierto grado */
+        background-image: repeating-linear-gradient(30deg,
+            red 0px,
+            blue 70px 80px );/*lo mismo q el otro solo q no es un corte solido*/
+    
+        }
+    .box4 {/*radial repeticion*/
+        width: 250px;
+        height: 250px;
+        border: 3px solid black;
+        margin: 2em auto;
+        /*background-image: repeating-radial-gradient(circle 30px, red 0,red 20px,blue 40px,blue 50px);/*similar al lineal repetition*/
+        background-image: repeating-radial-gradient(ellipse 80px 40px at center,red 0,red 10px,blue 10px,blue 20px);/**/
+        
+    }
+  
+    

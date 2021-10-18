@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<title> tablas </title>
+</head>
+<style >
+		th{
+			background: lightblue;
+		}
+		.red{
+			background: red;
+		}
+		.amarillo{
+			background: yellow;
+		}
+		.verde{
+			background: green ;
+		}
+
+	</style>
+<body>
+		<img src="imagen.jpg" height="50%" width="50%" border="20"> <br>
+		<!-- filas (tr) , columnas (td), mas negrita(th) --> 
+		
+																										
+		<table border="1" ><!-- border: hace q le de la forma a la tabla, no es muy recomendado ya q con css se hace. -->
+			<caption>#### Horario ####</caption>																						
+			<colgroup>
+				<col span="2"> <!-- salto de dos columnas -->
+				<col class=" amarillo"> <!-- coloco una clase para en style puda comocar el color-->
+				<col>
+				<col class=" verde">
+			</colgroup>	
+			<thead>
+				<tr>
+					<td> Hora</td>
+					<th> lunes</th>
+					<th> martes</th>
+					<th> miercoles</th>
+					<th> jueves</th>
+					<th> viernes</th>
+					<th> sabado</th>
+					<th> Domingo</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr >
+					<td > 9:00 </td>	
+					<td>mate</td>
+					<td>lengua</td>
+					<td>geografia</td>
+					<td>Ed. Fisica</td>
+					<td>historia</td>
+					<td>libre</td>
+					<td>libre</td>	
+				</tr>
+				<tr class="red" >
+					<td> 10:00 </td>	
+					<td>mate</td>
+					<td>lengua</td>
+					<td>geografia</td>
+					<td>Ed. Fisica</td>
+					<td>historia</td>
+					<td>libre</td>
+					<td>libre</td>	
+				</tr>
+				<tr>
+					<td> 11:00 </td>	
+					<td>historia</td>
+					<td>Ed. Fisica</td>
+					<td>geografia</td>
+					<td>lengua</td>
+					<td>mate</td>
+					<td>libre</td>
+					<td>libre</td>	
+				</tr>
+				<tr>
+					<td > 11:00 </td>	
+					<td>historia</td>
+					<td>Ed. Fisica</td>
+					<td>geografia</td>
+					<td>lengua</td>
+					<td>mate</td>
+					<td>libre</td>
+					<td>libre</td>	
+				</tr>
+				<tr> 
+					<td rowspan="2">12:00</td>				
+					<td colspan="7" align="center"> Descanso</td><!-- colspan: cantida de espacio horisontal-->
+				</tr>
+				<tr>
+					<td colspan="7"align="center">charla</td>
+				</tr>
+				<tr>
+					<td> 14:00/18:00 </td>	
+					<td>tallers<br><img src="1.png" width="50px"></td>
+					<td>taller</td>
+					<td>cine</td>
+					<td>bufe</td>
+					<td>bufe</td>
+					<td>futbool</td>
+					<td>basquet</td>	
+				</tr>	
+			</tbody>
+			<tfoot>
+				<tr>
+					<td>Total de hora</td>
+					<td colspan="2"> 5 hs and 30 min</td>
+				</tr>
+			</tfoot>
+		</table>
+
+
+
+</body>
+</html>

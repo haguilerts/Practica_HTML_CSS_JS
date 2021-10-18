@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="../bootstrap4.4.1/css/bootstrap.min.css">
+    <meta charset="UTF-8">
+	<title>alert </title>
+    <style >
+    	
+		.row{
+		  /*background: red;	
+		  /*padding: 4px;*/	  
+		} 
+		/*[class^="col"]{
+		  background: cyan;
+		  border:1px solid black;
+		  text-align-last: center;
+		  max-height: auto;
+		} */
+		
+    </style>		
+	
+</head>
+<body >
+		 
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+				<div class="alert alert-primary mt-2">alerts primary</div>
+				<div class="alert alert-secondary mt-2">alert-secondary</div>
+				<div class="alert alert-warning mt-2">alerts warning</div>
+				<div class="alert alert-darger mt-2">alerts darger</div>
+				<div class="alert alert-info mt-2">alerts info</div>
+				<div class="alert alert-light mt-2">alerts light</div>
+				<div class="alert alert-dark mt-2">alerts dark</div>
+
+			</div>
+			<div class="col-12">
+				<div class="alert alert-warning alert-dismissible fade show" role="alert">
+				  <strong>Hola gio!</strong> debes registrartte en alguno de estos campos 
+				  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+				  		<span aria-hidden="true">cerrar &times;</span>
+				  </button>
+				</div>
+			</div>
+			<div class="col-12">
+				<button type="button" class="btn btn-primary">
+				  Notifications <span class="badge badge-light">54</span>
+				</button>
+				<button type="button" class="btn btn-secondary">
+				  Notifications <span class="badge badge-dark">66</span>
+				</button>
+			</div>
+			<div class="col-12">
+				<button class=""> soy un botom normal</button>
+				<button class="btn"> soy un botom con clase1</button>
+				<button class="btn btn-secondary"> soy un botom con clase2</button>
+				<button class=" btn-link"> soy un botom le falta 1 class</button>				
+
+				<button type="button" class="btn btn-primary btn-lg btn-block"> button de nv de bloque</button>
+				<button type="button" class="btn btn-outline-primary">Primary</button>
+				<button type="button" class="btn btn-primary btn-lg">grande button</button>
+				<button type="button" class="btn btn-secondary btn-sm">chico button</button>
+				<a href="#" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Primary link</a>
+				<button type="button" class="btn btn-secondary btn-lg" disabled>Button desabilitado</button>
+				<button type="button" class="btn btn-dark" data-toggle="button" aria-pressed="false" autocomplete="off" > btn ok</button>
+
+
+			</div>
+			<div class="colo-12">
+				<div class="btn-group-toggle" data-toggle="buttons">
+				  <label class="btn btn-secondary active">
+				    <input type="checkbox" checked> Checked
+				  </label>
+				</div>
+			</div>
+			<div class="col-12">
+				<h1>grupo de input</h1>
+				<div class="btn-group btn-group-toggle" data-toggle="buttons">
+				  <label class="btn btn-secondary active">
+				    <input type="radio" name="genero" id="option1" autocomplete="off"  checked> mascunino
+				  </label>
+				  <label class="btn btn-primary">
+				    <input type="radio" name="options" id="option2" autocomplete="off"> femenino
+				  </label>
+				  <label class="btn btn-info">
+				    <input type="radio" name="options" id="option3" autocomplete="off"> Radio
+				  </label>
+				</div>
+		    </div>
+		    <div class="col-12">
+		    	<h1>grupo de button</h1>
+		    	<div class="btn-group" role="group" aria-label="Basic example">
+				  <button type="button" class="btn btn-secondary">isquierda</button>
+				  <button type="button" class="btn btn-secondary">medio</button>
+				  <button type="button" class="btn btn-secondary">derecha</button>
+				</div>
+				<div class="input-group col-5">
+			    <div class="input-group-prepend">
+			        <div class="  input-group-text" id="btnGroupAddon">@</div>
+				    </div>
+				    <input type="text" class="form-control" placeholder="Input group example" aria-label="Input group example" aria-describedby="btnGroupAddon">
+			  </div>
+			    <div class="btn-group btn-group-lg" role="group" aria-label="...">
+				    <button type="button" class="btn btn-secondary">isquierda</button>
+					<button type="button" class="btn btn-secondary">medio</button>
+					<button type="button" class="btn btn-secondary">derecha</button>
+			    </div>
+				<div class="btn-group" role="group" aria-label="...">
+					<button type="button" class="btn btn-secondary">isquierda</button>
+				    <button type="button" class="btn btn-secondary">medio</button>
+				    <button type="button" class="btn btn-secondary">derecha</button>
+				</div>
+				<div class="btn-group btn-group-sm" role="group" aria-label="...">
+					<button type="button" class="btn btn-secondary">isquierda</button>
+				    <button type="button" class="btn btn-secondary">medio</button>
+				    <button type="button" class="btn btn-secondary">derecha</button>
+				</div>
+
+				
+				  
+
+		    </div>
+		    <div class="col-12">
+		    	<div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+				  <button type="button" class="btn btn-secondary">1</button>
+				  <button type="button" class="btn btn-secondary">2</button>
+		    	<div class="btn-group" role="group">
+				    <button id="btnGroupDrop1" type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				      Dropdown
+				    </button>
+				    <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+				      <a class="dropdown-item" href="#">Dropdown link</a>
+				      <a class="dropdown-item" href="#">Dropdown link</a>
+				    </div>
+				  </div>
+				</div>
+		    </div>
+		    <div class="col-12"></div>
+		    <div class="col-12"></div>
+		</div>
+	</div>
+
+
+	<div class="container"> <h1>--- fin --</h1>  </div>
+	<!--////**************************************************-->
+
+	<script src="../jquery.min.js"></script>
+	<script src="https://unpkg.com/@popperjs/core@2"></script>
+	<script src="../bootstrap4.4.1/js/bootstrap.min.js" ></script>
+	
+</body>
+</html>
+<!--
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+				
+			</div>
+		</div>
+	</div>
+  .col- : es para celulares (Estra small) 
+  .col-sm- : es para cel.   (small)
+  .col-md- : es para tables (medium)
+  .col-lg- : es para pc     (large)
+  .col-xl- : es para TV led.(Extra Large)
+(Estra small) < 576px < (small) < 768px < (medium) < 992px < (large) < 12000px< (Extra large) < 
+
+color : primary secondary success danger warning info light
+		dark body muted white black 
+-->

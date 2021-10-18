@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="../bootstrap4.4.1/css/bootstrap.min.css">
+    <style >
+    	
+		/*.row{
+		  background: red;	
+		  padding: 4px;	  
+		} 
+		[class^="col"]{
+		  background: cyan;
+		  border:1px solid black;
+		  text-align-last: center;
+		  max-height: auto;
+		} */
+		
+			
+    </style>
+	<meta charset="UTF-8">
+	<title>display </title>
+				
+</head>
+<body >
+	    
+<!--////************* https://unsplash.com/s/photos/paisajes *************************************-->	
+<!--////**************************************************-->
+<div class="container"> <h1>--- display --</h1>  </div>
+		<!-- linea(inline): respeta el flujo pero no respeta alto y ancho |
+			 bloque(block): NO respeta el flujo, utiliza toda la linea    | 
+			linea_bloque(inline-block): respeta alto-ancho-flujo          |
+Escondido en todos	.d-none
+Oculto solo en xs	.d-none .d-sm-block
+Oculto solo en sm	.d-sm-none .d-md-block
+Oculto solo en md	.d-md-none .d-lg-block
+Oculto solo en lg	.d-lg-none .d-xl-block
+Oculto solo en xl	.d-xl-none
+Visible en todos	.d-block
+Visible solo en xs	.d-block .d-sm-none
+Visible solo en sm	.d-none .d-sm-block .d-md-none
+Visible solo en md	.d-none .d-md-block .d-lg-none
+Visible solo en lg	.d-none .d-lg-block .d-xl-none
+Visible solo en xl	.d-none .d-xl-block
+		-->
+	<div class="container">
+		<div class="ruw">
+			<div class="col-12">Se esconde(none) cuado llega a su limite <br>
+				<div class="d-inline p-2 bg-dark text-white		d-none">1/no se oculta</div>		
+				<div class="d-inline p-2 bg-dark 	text-white	d-sm-none">2/d-inline(sm)</div>
+				<div class="d-inline p-2 bg-secondary text-white d-md-none">3/d-inline(md)</div>
+				<div class="d-inline p-2 bg-info text-white		d-lg-none">4/d-inline(lg)</div>
+				<div class="d-inline p-2 bg-primary text-white  d-xl-none">5/d-inline(xl)</div>			
+			</div>
+			<div class="col-12 mt-5">Se combierte en linea cuado llega a su limite y abilita(block)<br>
+				<div class="d-inline p-2 bg-dark text-white		d-block">0/</div>
+				<div class="d-inline p-2 bg-primary text-white  d-xs-block">1/d-inline</div>
+				<div class="d-inline p-2 bg-dark 	text-white	d-sm-block">2/d-inline</div>
+				<div class="d-inline p-2 bg-secondary text-white d-md-block">3/d-inline</div>
+				<div class="d-inline p-2 bg-info text-white		d-lg-block">4/d-inline</div>
+				<div class="d-inline p-2 bg-primary text-white  d-xl-block">5/d-inline</div>		
+			</div>
+		</div>
+	</div>
+		
+<div class="container"> <h1>--- Enbeds --</h1>  </div>
+<!--////**************************************************-->	
+<div class="container">
+	<div class="row">
+		<div class="col-6">
+			<div class="embed-responsive embed-responsive-21by9 bg-primary">
+				<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/BRefEbDWlzo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			</div>
+			<div class="embed-responsive embed-responsive-16by9">
+			  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0" allowfullscreen></iframe>			  
+			</div>
+			<div class="embed-responsive embed-responsive-4by3 bg-primary"> 
+				<iframe width="560" height="315" src="https://www.youtube.com/embed/kTezk-S4-IU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			</div>
+		</div>
+	</div>
+</div>
+	
+
+<div class="container"> <h1>--- fin --</h1>  </div>
+<!--////**************************************************-->
+
+<script src="../jquery.js"></script>
+<script src="https://unpkg.com/@popperjs/core@2"></script>
+<script src="../bootstrap4.4.1/js/bootstrap.min.js" ></script>
+	
+</body>
+</html>
+<!--
+	<div class="container">
+		<div class="ruw">
+			<div class="col-12">
+				
+			</div>
+		</div>
+	</div>
+  .col- : es para celulares (Estra small) 
+  .col-sm- : es para cel.   (small)
+  .col-md- : es para tables (medium)
+  .col-lg- : es para pc     (large)
+  .col-xl- : es para TV led.(Extra Large)
+(Estra small) < 576px < (small) < 768px < (medium) < 992px < (large) < 12000px< (Extra large) < 
+-->

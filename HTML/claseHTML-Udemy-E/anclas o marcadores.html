@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> anclas o marcadores</title>
+	<style >
+		.segundo::before{/*inicial*/
+			content: url(4.jpg);
+		}
+		.segundo::after{/*final*/
+			content: url(4.jpg);
+		}
+		p::before, p::after{
+			content: '$';
+			color:red;
+		}
+		h1{ counter-reset: miTitulo; }
+		h2{	counter-increment: miTitulo; }
+		h2::after { content:'Alias' counter(miTitulo) url(4.jpg);  }
+		label::before{ content: attr(for);
+		}
+		.h3{
+			background: url(4.jpg) 0px -80px ;
+			height: 150px;
+			width: 250px;
+		}
+	</style>
+</head>
+<body>
+	<label for="Giovanny"> <input type="text" name="nombre" id="Giovanny"> </label>
+	<h2>.</h2>
+	<h2>,</h2>
+	<h3 class="h3">Giovanny</h3>
+	<header>
+		<nav id="nav">
+			<a href="#section-1"> seccion 1</a>
+			<a href="#section-2"> seccion 2</a>
+			<a href="#section-3"> seccion 3</a>
+			<a href="#section-4"> seccion 4</a>
+			<!-- usamos un id como referencia para acceder a los documentos, de tal manerase pueda desplazar asta la seccion indocicada -->
+		</nav>
+	</header>
+	<section id="section-1">
+		<h1> seccion 1</h1>
+		<a href="#nav"> volver arriba</a>
+		<p >	Isaac Newton (1643 - 1727) dio un paso más adelante: declaró que "todo sucede como si la materia atrajera a la materia con una fuerza que es proporcional a las masas e inversamente proporcional a la distancia que las separa". Newton explico cómo se comportan los cuerpos ante la gravedad.  Desde ese momento la fuerza de gravedad sirvió para explicar cómo funcionan los movimientos de los cuerpos en la Tierra y en el espacio. Dos siglos más tarde, Albert Einstein propuso un modelo teórico para explicar el origen de la gravedad.
+
+		Según la teoría de Newton, todas las partículas materiales y todos los cuerpos se atraen mutuamente por el simple hecho de tener masa, en proporción directa a sus masas, pero esta fuerza pierde intensidad en proporción al cuadrado de la distancia que los separa.
+
+		Esto quiere decir que un astronauta que está en el suelo (a unos 6.300 km del centro de la Tierra) si ahí pesa 100 kg con su equipo (es atraído por la gravedad terrestre con la fuerza de 100 kg), cuando esté a 6.300 km de altura, es decir al doble de distancia, la fuerza de atracción será la cuarta parte: 25 kg.
+
+		La fuerza de gravedad nunca es repulsiva, siempre produce atracción entre los cuerpos, cualquiera que sea su composición, y la fuerza resultante se produce atrayéndose el centro de gravedad de un objeto con el centro de gravedad del otro.
+
+		Además de obligar a que los objetos caigan hacia abajo, esta fuerza le da a la Tierra y a sus habitantes muchas de sus características porque, eso sí es necesario dejarlo claro: no en cualquier otro astro encontramos condiciones idénticas.
+		Isaac Newton (Woolsthorpe, Lincolnshire; 25 de diciembre de 1642jul./ 4 de enero de 1643greg.-Kensington, Londres; 20 de marzojul./ 31 de marzo de 1727greg.) fue un físico, teólogo, inventor, alquimista y matemático inglés. Es autor de los Philosophiæ naturalis principia mathematica, más conocidos como los Principia, donde describe la ley de la gravitación universal y estableció las bases de la mecánica clásica mediante las leyes que llevan su nombre. Entre sus otros descubrimientos científicos destacan los trabajos sobre la naturaleza de la luz y la óptica (que se presentan principalmente en su obra Opticks), y en matemáticas, el desarrollo del cálculo infinitesimal.
+
+		Newton comparte con Gottfried Leibniz el crédito por el desarrollo del cálculo integral y diferencial, que utilizó para formular sus leyes de la física y astronomía. También contribuyó en otras áreas de las matemáticas, desarrollando el teorema del binomio y las fórmulas de Newton-Cotes.
+
+		Entre sus hallazgos científicos se encuentran el descubrimiento de que el espectro de color que se observa cuando la luz blanca pasa por un prisma es inherente a esa luz, en lugar de provenir del prisma (como había sido postulado por Roger Bacon en el siglo XIII); su argumentación sobre la posibilidad de que la luz estuviera compuesta por partículas; su desarrollo de una ley de convección térmica, que describe la tasa de enfriamiento de los objetos expuestos al aire; sus estudios sobre la velocidad del sonido en el aire; y su propuesta de una teoría sobre el origen de las estrellas. Fue también un pionero de la mecánica de fluidos, estableciendo una ley sobre la viscosidad.
+
+		Newton fue el primero en demostrar que las leyes naturales que gobiernan el movimiento en la Tierra y las que gobiernan el movimiento de los cuerpos celestes son las mismas. Es, a menudo, calificado como el científico más grande de todos los tiempos, y su obra como la culminación de la revolución científica. El matemático y físico Joseph Louis Lagrange (1736-1813), dijo que «Newton fue el más grande genio que ha existido y también el más afortunado, dado que solo se puede encontrar una vez un sistema que rija el mundo».</p>		
+	</section>
+
+	<section id="section-2">
+		<h1> seccion 2</h1>
+		<a href="#nav"> volver arriba</a>
+		<p class="segundo">	La teoría elaborada por Isaac Newton afirma que esa fuerza de atracción, denominada gravedad, es la responsable de la caída de los cuerpos en la Tierra y de los movimientos a gran escala que se observan en el Universo: la órbita de la Luna alrededor de la Tierra y la órbita de los planetas alrededor del Sol.
+		Isaac Newton (Woolsthorpe, Lincolnshire; 25 de diciembre de 1642jul./ 4 de enero de 1643greg.-Kensington, Londres; 20 de marzojul./ 31 de marzo de 1727greg.) fue un físico, teólogo, inventor, alquimista y matemático inglés. Es autor de los Philosophiæ naturalis principia mathematica, más conocidos como los Principia, donde describe la ley de la gravitación universal y estableció las bases de la mecánica clásica mediante las leyes que llevan su nombre. Entre sus otros descubrimientos científicos destacan los trabajos sobre la naturaleza de la luz y la óptica (que se presentan principalmente en su obra Opticks), y en matemáticas, el desarrollo del cálculo infinitesimal.
+
+		Newton comparte con Gottfried Leibniz el crédito por el desarrollo del cálculo integral y diferencial, que utilizó para formular sus leyes de la física y astronomía. También contribuyó en otras áreas de las matemáticas, desarrollando el teorema del binomio y las fórmulas de Newton-Cotes.
+
+		Entre sus hallazgos científicos se encuentran el descubrimiento de que el espectro de color que se observa cuando la luz blanca pasa por un prisma es inherente a esa luz, en lugar de provenir del prisma (como había sido postulado por Roger Bacon en el siglo XIII); su argumentación sobre la posibilidad de que la luz estuviera compuesta por partículas; su desarrollo de una ley de convección térmica, que describe la tasa de enfriamiento de los objetos expuestos al aire; sus estudios sobre la velocidad del sonido en el aire; y su propuesta de una teoría sobre el origen de las estrellas. Fue también un pionero de la mecánica de fluidos, estableciendo una ley sobre la viscosidad.
+
+		Newton fue el primero en demostrar que las leyes naturales que gobiernan el movimiento en la Tierra y las que gobiernan el movimiento de los cuerpos celestes son las mismas. Es, a menudo, calificado como el científico más grande de todos los tiempos, y su obra como la culminación de la revolución científica. El matemático y físico Joseph Louis Lagrange (1736-1813), dijo que «Newton fue el más grande genio que ha existido y también el más afortunado, dado que solo se puede encontrar una vez un sistema que rija el mundo».
+		Isaac Newton (Woolsthorpe, Lincolnshire; 25 de diciembre de 1642jul./ 4 de enero de 1643greg.-Kensington, Londres; 20 de marzojul./ 31 de marzo de 1727greg.) fue un físico, teólogo, inventor, alquimista y matemático inglés. Es autor de los Philosophiæ naturalis principia mathematica, más conocidos como los Principia, donde describe la ley de la gravitación universal y estableció las bases de la mecánica clásica mediante las leyes que llevan su nombre. Entre sus otros descubrimientos científicos destacan los trabajos sobre la naturaleza de la luz y la óptica (que se presentan principalmente en su obra Opticks), y en matemáticas, el desarrollo del cálculo infinitesimal.
+
+		Newton comparte con Gottfried Leibniz el crédito por el desarrollo del cálculo integral y diferencial, que utilizó para formular sus leyes de la física y astronomía. También contribuyó en otras áreas de las matemáticas, desarrollando el teorema del binomio y las fórmulas de Newton-Cotes.
+
+		Entre sus hallazgos científicos se encuentran el descubrimiento de que el espectro de color que se observa cuando la luz blanca pasa por un prisma es inherente a esa luz, en lugar de provenir del prisma (como había sido postulado por Roger Bacon en el siglo XIII); su argumentación sobre la posibilidad de que la luz estuviera compuesta por partículas; su desarrollo de una ley de convección térmica, que describe la tasa de enfriamiento de los objetos expuestos al aire; sus estudios sobre la velocidad del sonido en el aire; y su propuesta de una teoría sobre el origen de las estrellas. Fue también un pionero de la mecánica de fluidos, estableciendo una ley sobre la viscosidad.
+
+		Newton fue el primero en demostrar que las leyes naturales que gobiernan el movimiento en la Tierra y las que gobiernan el movimiento de los cuerpos celestes son las mismas. Es, a menudo, calificado como el científico más grande de todos los tiempos, y su obra como la culminación de la revolución científica. El matemático y físico Joseph Louis Lagrange (1736-1813), dijo que «Newton fue el más grande genio que ha existido y también el más afortunado, dado que solo se puede encontrar una vez un sistema que rija el mundo».</p>		
+	</section>
+
+	<section id="section-3">
+		<h1> seccion 3</h1>
+		<a href="#nav"> volver arriba</a>
+<p>	Para llegar a estas conclusiones necesitó nuevas y más potentes herramientas de cálculo. No eran suficientes las matemáticas y geometría heredadas de los sabios de la antigûedad griega. Newton tuvo la genialidad y la fuerza de voluntad para crear el cálculo diferencial y el cálculo integral.
+Isaac Newton (Woolsthorpe, Lincolnshire; 25 de diciembre de 1642jul./ 4 de enero de 1643greg.-Kensington, Londres; 20 de marzojul./ 31 de marzo de 1727greg.) fue un físico, teólogo, inventor, alquimista y matemático inglés. Es autor de los Philosophiæ naturalis principia mathematica, más conocidos como los Principia, donde describe la ley de la gravitación universal y estableció las bases de la mecánica clásica mediante las leyes que llevan su nombre. Entre sus otros descubrimientos científicos destacan los trabajos sobre la naturaleza de la luz y la óptica (que se presentan principalmente en su obra Opticks), y en matemáticas, el desarrollo del cálculo infinitesimal.
+
+Newton comparte con Gottfried Leibniz el crédito por el desarrollo del cálculo integral y diferencial, que utilizó para formular sus leyes de la física y astronomía. También contribuyó en otras áreas de las matemáticas, desarrollando el teorema del binomio y las fórmulas de Newton-Cotes.
+
+Entre sus hallazgos científicos se encuentran el descubrimiento de que el espectro de color que se observa cuando la luz blanca pasa por un prisma es inherente a esa luz, en lugar de provenir del prisma (como había sido postulado por Roger Bacon en el siglo XIII); su argumentación sobre la posibilidad de que la luz estuviera compuesta por partículas; su desarrollo de una ley de convección térmica, que describe la tasa de enfriamiento de los objetos expuestos al aire; sus estudios sobre la velocidad del sonido en el aire; y su propuesta de una teoría sobre el origen de las estrellas. Fue también un pionero de la mecánica de fluidos, estableciendo una ley sobre la viscosidad.
+
+Newton fue el primero en demostrar que las leyes naturales que gobiernan el movimiento en la Tierra y las que gobiernan el movimiento de los cuerpos celestes son las mismas. Es, a menudo, calificado como el científico más grande de todos los tiempos, y su obra como la culminación de la revolución científica. El matemático y físico Joseph Louis Lagrange (1736-1813), dijo que «Newton fue el más grande genio que ha existido y también el más afortunado, dado que solo se puede encontrar una vez un sistema que rija el mundo».
+Isaac Newton (Woolsthorpe, Lincolnshire; 25 de diciembre de 1642jul./ 4 de enero de 1643greg.-Kensington, Londres; 20 de marzojul./ 31 de marzo de 1727greg.) fue un físico, teólogo, inventor, alquimista y matemático inglés. Es autor de los Philosophiæ naturalis principia mathematica, más conocidos como los Principia, donde describe la ley de la gravitación universal y estableció las bases de la mecánica clásica mediante las leyes que llevan su nombre. Entre sus otros descubrimientos científicos destacan los trabajos sobre la naturaleza de la luz y la óptica (que se presentan principalmente en su obra Opticks), y en matemáticas, el desarrollo del cálculo infinitesimal.
+
+Newton comparte con Gottfried Leibniz el crédito por el desarrollo del cálculo integral y diferencial, que utilizó para formular sus leyes de la física y astronomía. También contribuyó en otras áreas de las matemáticas, desarrollando el teorema del binomio y las fórmulas de Newton-Cotes.
+
+Entre sus hallazgos científicos se encuentran el descubrimiento de que el espectro de color que se observa cuando la luz blanca pasa por un prisma es inherente a esa luz, en lugar de provenir del prisma (como había sido postulado por Roger Bacon en el siglo XIII); su argumentación sobre la posibilidad de que la luz estuviera compuesta por partículas; su desarrollo de una ley de convección térmica, que describe la tasa de enfriamiento de los objetos expuestos al aire; sus estudios sobre la velocidad del sonido en el aire; y su propuesta de una teoría sobre el origen de las estrellas. Fue también un pionero de la mecánica de fluidos, estableciendo una ley sobre la viscosidad.
+
+Newton fue el primero en demostrar que las leyes naturales que gobiernan el movimiento en la Tierra y las que gobiernan el movimiento de los cuerpos celestes son las mismas. Es, a menudo, calificado como el científico más grande de todos los tiempos, y su obra como la culminación de la revolución científica. El matemático y físico Joseph Louis Lagrange (1736-1813), dijo que «Newton fue el más grande genio que ha existido y también el más afortunado, dado que solo se puede encontrar una vez un sistema que rija el mundo».</p>		
+	</section>
+
+	<section id="section-4">
+		<h1> seccion 4</h1>
+		<a href="#nav"> volver arriba</a>
+		<p>Ambas disciplinas fueron adoptadas de inmediato por otros científicos y actualmente son herramientas necesarias en todas las profesiones que tienen que ver con cualquier rama de ingeniería.
+		Isaac Newton (Woolsthorpe, Lincolnshire; 25 de diciembre de 1642jul./ 4 de enero de 1643greg.-Kensington, Londres; 20 de marzojul./ 31 de marzo de 1727greg.) fue un físico, teólogo, inventor, alquimista y matemático inglés. Es autor de los Philosophiæ naturalis principia mathematica, más conocidos como los Principia, donde describe la ley de la gravitación universal y estableció las bases de la mecánica clásica mediante las leyes que llevan su nombre. Entre sus otros descubrimientos científicos destacan los trabajos sobre la naturaleza de la luz y la óptica (que se presentan principalmente en su obra Opticks), y en matemáticas, el desarrollo del cálculo infinitesimal.
+
+		Newton comparte con Gottfried Leibniz el crédito por el desarrollo del cálculo integral y diferencial, que utilizó para formular sus leyes de la física y astronomía. También contribuyó en otras áreas de las matemáticas, desarrollando el teorema del binomio y las fórmulas de Newton-Cotes.
+
+		Entre sus hallazgos científicos se encuentran el descubrimiento de que el espectro de color que se observa cuando la luz blanca pasa por un prisma es inherente a esa luz, en lugar de provenir del prisma (como había sido postulado por Roger Bacon en el siglo XIII); su argumentación sobre la posibilidad de que la luz estuviera compuesta por partículas; su desarrollo de una ley de convección térmica, que describe la tasa de enfriamiento de los objetos expuestos al aire; sus estudios sobre la velocidad del sonido en el aire; y su propuesta de una teoría sobre el origen de las estrellas. Fue también un pionero de la mecánica de fluidos, estableciendo una ley sobre la viscosidad.
+
+		Newton fue el primero en demostrar que las leyes naturales que gobiernan el movimiento en la Tierra y las que gobiernan el movimiento de los cuerpos celestes son las mismas. Es, a menudo, calificado como el científico más grande de todos los tiempos, y su obra como la culminación de la revolución científica. El matemático y físico Joseph Louis Lagrange (1736-1813), dijo que «Newton fue el más grande genio que ha existido y también el más afortunado, dado que solo se puede encontrar una vez un sistema que rija el mundo».
+		Isaac Newton (Woolsthorpe, Lincolnshire; 25 de diciembre de 1642jul./ 4 de enero de 1643greg.-Kensington, Londres; 20 de marzojul./ 31 de marzo de 1727greg.) fue un físico, teólogo, inventor, alquimista y matemático inglés. Es autor de los Philosophiæ naturalis principia mathematica, más conocidos como los Principia, donde describe la ley de la gravitación universal y estableció las bases de la mecánica clásica mediante las leyes que llevan su nombre. Entre sus otros descubrimientos científicos destacan los trabajos sobre la naturaleza de la luz y la óptica (que se presentan principalmente en su obra Opticks), y en matemáticas, el desarrollo del cálculo infinitesimal.
+
+		Newton comparte con Gottfried Leibniz el crédito por el desarrollo del cálculo integral y diferencial, que utilizó para formular sus leyes de la física y astronomía. También contribuyó en otras áreas de las matemáticas, desarrollando el teorema del binomio y las fórmulas de Newton-Cotes.
+
+		Entre sus hallazgos científicos se encuentran el descubrimiento de que el espectro de color que se observa cuando la luz blanca pasa por un prisma es inherente a esa luz, en lugar de provenir del prisma (como había sido postulado por Roger Bacon en el siglo XIII); su argumentación sobre la posibilidad de que la luz estuviera compuesta por partículas; su desarrollo de una ley de convección térmica, que describe la tasa de enfriamiento de los objetos expuestos al aire; sus estudios sobre la velocidad del sonido en el aire; y su propuesta de una teoría sobre el origen de las estrellas. Fue también un pionero de la mecánica de fluidos, estableciendo una ley sobre la viscosidad.
+
+		Newton fue el primero en demostrar que las leyes naturales que gobiernan el movimiento en la Tierra y las que gobiernan el movimiento de los cuerpos celestes son las mismas. Es, a menudo, calificado como el científico más grande de todos los tiempos, y su obra como la culminación de la revolución científica. El matemático y físico Joseph Louis Lagrange (1736-1813), dijo que «Newton fue el más grande genio que ha existido y también el más afortunado, dado que solo se puede encontrar una vez un sistema que rija el mundo».</p>		
+	</section>
+</body>
+</html>

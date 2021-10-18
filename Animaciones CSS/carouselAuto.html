@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>carouselAuto</title>
+    <style>
+        #principal{  position: relative; overflow: hidden;   }
+        #container-prog{
+            position: absolute; height: 10px;
+            background-color: rgba(0, 0, 0, .2);
+            width: 100%; top: 0; z-index: 1000;
+        }
+        #progreso{
+            height: 100%; border-radius: 0 3px 3px 0;
+            background-color: rgba(228, green, 69, 69,.7);
+            transition: width .8s;
+        }
+        #container-img{
+            position: relative;
+            z-index: 998; height: 600px;
+        }
+        img{
+            position: absolute; height: 100%; width: 100%;
+            top: 0; left: 0; object-fit: cover;
+        }
+        #img2{ /* left: 100%; */ opacity: 0;  }
+        .active{  /* left: 0 !important; */ transition: all 1s; opacity: 1 !important; }
+        #indicadores{
+            width: 100%; text-align: center; position: absolute;
+            bottom: 20px; z-index: 999;
+        }
+        .circles{
+            width: 25px; height: 25px; border: 2px solid while;
+            display: inline-block; margin: 0 5px 0 5px;
+            background-color: transparent; border-radius: 50%;
+        }
+        .resaltado{
+            background-color: rgba(228, 69, 69, 1);
+            transition: background-color .8s;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="principal"> <!-- slideshow-principal -->        
+        <div id="container-prog"> <!-- progress-bar-container -->
+            <div id="progreso"></div><!-- progress-bar -->
+        </div>
+        <div class="container-img"><!-- slideshow -->
+            <img src="" alt="img1" id="img1">
+            <img src="" alt="img2" id="img2">
+        </div>
+        <div id="indicadores"></div><!-- indicadores -->
+    </div>
+    <script>
+        const imgs=['img/1.jpg','img/2.jpg','img/3.jpg','img/4.jpg']
+        let i=1 //
+        const img1=document.querySelector('#img1')
+        const img2=document.querySelector('#img2')
+        const progresar=document.querySelector('#progreso')
+        const divIndicadores=document.querySelector('#indicadores')
+        
+        let porsentaje_base=100/imgs.length;
+        let porsentaje_actual=porsentaje_base;
+
+        for (let j = 0; j < imgs.length; j++) {
+            const div= document.createElement('div')
+            div.classList.add('div')
+            div.id= j
+            divIndicadores.appendChild(div) 
+        }
+        progresar.style.width=`${porsentaje_base}%`
+        img1.src=imgs[0]
+        const circulos= document.querySelector('circles')
+        circulos[0].classList.add('resaltado')
+        // console.log(circulos)
+
+        const slideshow =()=>{
+            img2.src=imgs[i]
+            const circulo_actual=Array.from(circulos).find(el => el.id=i )
+            Array.from(circulos).forEach( cir => cir.classList.remove('.resaltado'))
+            circulo_actual.classList.add('.resaltado')
+
+            img2.classList.add('.active')
+            i++
+            porsentaje_actua+=porsentaje_base
+            progresar.style.width=`${porsentaje_actual}%`
+
+            if(i==imgs.length){
+                i=0
+                porsentaje_actual=porsentaje_base-porsentaje_base
+            }
+            setTimeout(()=>{
+                img1.src=img2.src
+                img2.classList.remove('.active')
+            },1000);
+        }
+        setInterval(slideshow, 4000)
+    </script>
+</body>
+</html>

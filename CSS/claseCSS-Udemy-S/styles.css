@@ -1,0 +1,64 @@
+/*
+object-fit: se usa para especificar cómo se debe cambiar el tamaño de <img> o <video> para que se ajuste a su contenedor.
+    fill: valor por defecto
+    contain: El contenido se ajustará hasta rellenar de forma horizontal o vertical el contenedor sin deformarse
+    cover: El contenido se ajustará hasta rellenar de forma horizontal y vertical el contenedor sin deformarse
+    none: El contenido no se redimensiona y mantiene su tamño original mostrando solo el trozo de las dimensiones especificadas
+    scale-down: Selecciona el menor de la comparación entre none y contain.
+
+objet-position: Coloca la imagen cuando esta no se muestra completa en el contenedor
+
+filter:
+    none
+    blur(px): desenfoca la imagen
+    brightness(%): Ajusta el brillo de la imagen siendo 1 el original. De 0 a 1 dan oscuridad y de 1 a n dan sobreexposición
+    contrast(%): Ajusta el contraste de la imagen siendo 1 el original. De 0 es negro y de 1 a n dan más contraste
+    drop-shadow(h-shadow v-shadow blur (spread) color): Aplica una sombra paralela a la imagen
+    grayscale(%): Convierte la imagen a escala de grises, 0 es el original y 1 sería blanco y negro completamente
+    hue-rotate(deg): Añade matiz de color a la imagen. Se da un valor en grados según la rueda cromática. El valor máximo es 360deg
+    invert(%): Invierte el color de la imagen. Saca un negativo. 0 es el valor por defecto y 1 es totalmente invertida
+    opacity(%): Controla la opacidad de la imagen. 1 es el valor por defecto y 0 es transparente
+    saturate(%): Controla la saturación de color de la imagen. 1 es el valor por defecto, 0 es totalmente desaturada y por encima de 1 se sobresatura
+    sepia(%): Aplica un tono sepia a la imagen. 0 es el valor por defecto y 1 es totalmente sepia
+    url() - Buscar información
+*/
+
+     .img{/*cover contain*/
+        width: 250px;
+        height: 450px;
+        background: red;
+       /* object-fit: contain ;/*con esto no cambia sus dimenciones y su tamanio reduce con la escala adecuada*/
+        object-fit: cover ;/*con estonose deforma pero se recorta la iomagen */
+       /* object-fit: fill; /* rellena todo el contenedor deformandoce */
+       /*object-fit: none ; /*con esto toma las dimeciones elejidas y dandole una position te muestra sierta parte del la img*/
+       object-position:  bottom; 
+        /*object-fit: scale-down;/*selecciona la menos comparacion q hay entre none y contain*/
+        transition: object-position 2s;/*no lo vimos aun, pero muestra la trasnsion en el cual recorre*/
+    }
+    .img:hover{/*al momento de acercar el maus a la imagne me muestra otra posision elejida*/
+        object-position: right;
+    }
+
+
+    
+    .img-2{
+        max-width: 100%;
+        /* filter: blur(5px) /*la imagen lo vuelve opaco*/
+        /* filter: brightness(.3) /* de 1 a 0 se hace mas oscuro, mayor a 1 se hace mas blanco*/
+        /*filter: contrast(8) /*aca con ma misma modalidad q el anteriro cambiamos el costraste*/
+/*sombras=> h-shadow: horizontal |v-shadow: vertical |blur: desenfoque |(spread): extencion de sombra |(color): color /* */
+        filter: drop-shadow(h-shadow v-shadow blur (spread) color) /* */
+        /*filter: drop-shadow(3em 3em 15px  black) /* pone un sombreado*/
+        
+        /* filter: grayscale(.4) /* com mayor a 0 cada ves la img forma en blanco y negro*/
+        /* filter: hue-rotate(180deg) /*a traves de la rueda de colores en cierta grado cambia el color y y su unidad es deg. */
+        /* filter: invert(.8) /*de 0 a 1 el color de la imagen se invirte*/
+        /* filter: opacity(.3) /*de 1 a 0 el color cada ves mas blanco */
+        /* filter: saturate(2) /* mayor a 0 cambia la saturacion */
+         filter: sepia(.7) /* de 0 a 1 el color de sepia cambia */
+    }
+
+    .img-2:hover{/*hover hace q cuando el maus se hacerque tenga los siguientes cambios */
+        filter: none;/*al acercar el maus de opaco pasa a claridad(mas nitido)
+                        */
+    }

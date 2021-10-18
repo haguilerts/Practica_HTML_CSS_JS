@@ -1,0 +1,195 @@
+		Grid - Fundamentos
+	
+1) ------------------------------------ grid-template / shorthand / span ----------------------------------------------------------------------------------------------------------
+   *Ordenar elementos con grid-column y grid-row
+
+    	grid-column-start: establece desde que column-line empezará el elemento
+    	grid-column-end: establece hasta que column-line llega el elemento
+    	grid-row-start: establece desde que row-line empezará el elemento
+    	grid-row-end: establece hasta que row-line llega el elemento
+
+   ej: display: grid;
+        grid-template-columns: 100px 50px 150px 10px; /* el ancho de cada selda horizontal */
+        grid-template-rows: 100px 120px 50px;
+        grid-column-gap: 10px; /*espacio entre columnas de las seldas*/
+        grid-row-gap: 20px; /*espacio entre filas de las seldas*/
+
+   
+
+    *Existe un shorthand que engloba las 2 propiedades:
+    	grid-column: start / end
+    	grid-row: start / end 		eje:  	grid-column: 1 / 3;
+    						grid-row:    2 / 4;
+
+    *tanto "start" como "end" admiten valores positivos, negativos y la palabra span
+    	*Valor positivo: Empieza a contar las column-lines o las row-lines de izquierda a derecha
+    	*Valor negativo: Empieza a contar las column-lines o las row-lines de derecha a izquierda
+    	*span: establecemos cuantas columnas o filas ha de ocupar, span 3 es como decirle que ocupe 3 columnas. 	ej: grid-row-start: span 2;
+    															
+	*tip: Si ponemos en el valor end -1 llegará hasta el final
+
+2) ------------------------------ Medidas de la cuadrícula ----------------------------------------------------------------------------------------------------------------
+   	 
+     *Se pueden dar medidas con cualquiera de las unidades que ya conocemos(px, %, vw) y dos más que vienen con grid, fr y auto
+	*fr: Equivale a n fracciones del espacio disponible después de establecer las medidas fijas.
+        *auto: Equivale al espacio que quede después de repartir todos elementos, es el último que se reparte. El tamaño mínimo del item será el espacio del contenido + el padding si lo tuviera
+
+    *función repeat(): Con la función repeat podemos establecer repeticiones de medidas o patrones. En el caso "simple" recibiría 2 parámetros (valores):
+         -repeat(nColumnas o nFilas, medida)
+         -grid-template-columns: repeat(4,100px) es lo mismo que grid-template-columns: 100px 100px 100px 100px;
+        Si como segundo valor añadimos más de una medida, construiremos un patrón, no hay límite de valores.
+         -grid-template-columns: repeat(2, 100px 50px...) es lo mismo que grid-template-columns: 100px 50px 50px 100px;
+	ej: /*grid-template-columns: repeat(2, 40px );/*N°de cantidad de colmn, tamanio de ancho, y esto es lo mismo para las fimas*/
+	    /*grid-template-columns: 50px repeat(3, 40px ) 100px;/*hago la combinacion con las otras ya q tendre 5 columnas*/
+	    /*grid-template-columns:  repeat(3, 40px 100px) ;/* colm intercaldas  es: Col1:40px Col2:100px   Col3:40px Col4:100px. todo es se le agrega n veces*/
+   
+3) ------------------------------ Explicit- Implicit ---------------------------------------------------------------------------------------------------------------
+	*Explicit(lo q fue declarado) grid:
+        	Es el grid que declaramos, tanto con grid-template-columns como con grid-template-rows.
+	*Implicit grid:
+        	Es el grid que no declaramos, los items que quedan fuera del explicit grid.
+
+    		*grid-auto-columns: Establece qué hacer con las columnas no definidas.
+		*grid-auto-rows: Establece qué hacer con las filas no definidas.
+    		*grid-auto-flow: Establece la dirección en la cual se va a pintar el implicit grid. Admite 3 valores: 
+            	*row(default): Se crearán filas adicionales.
+            		column: Se crearán columnas adicionales.
+            	*dense: Establece qué hacer con los huecos que queden.
+			rows dense: elemento x defecto
+			columns dense: elemento de columna
+4) -------------------------------- Grid - minmax - auto-fill - auto-fit --------------------------------------------------------------------------------------------------------------
+   	minmax(): es una funcion,  Recibe dos parámetros (valores) para establecer el mínimo y el máximo que pueden tener los items.
+    
+    		*min-content: mímimo necesario en función del contenido
+    		*max-content: máximo necesario en función del contenido
+		*auto-fill: Crea tantos grid-items vacios como quepan en el viewport respetando las medidas.
+		*auto-fit: Elimina los grid-items vacios que no se estén ocupando.
+
+	eje: 	grid-template-columns: repeat(2, minmax(100px, 1fr));
+		/* grid-template-columns: repeat(3, minmax(70px, 1fr));/* asigna a 3 columnas con un rango min:70px y max:maximo de la pantalla*/
+   		/* grid-template-columns: repeat(3, minmax(max-content, 1fr));/* max-content: lo q haces es el contenido el del bloque se mantenga en la misma linea */
+   		/* grid-template-columns: repeat(3, minmax(min-content, 1fr));/* min-content: lo q haces es el contenido el del bloque llegue al minimo espesor y las palabras se vea de forma vertical uno abajo del otro */
+    
+5) ----------------------------- Alineamiento: "justify-align-place"(items, content, self, )	-----------------------------------------------------------------------------------------------------------------
+
+    	*justify-items: Alinea los elementos horizontalmente respecto a la celda
+    	*align-items:   Alinea los elementos verticalmente respecto a la celda. Admiten los valores:
+    	    
+        	-start o flex-star: los elementos se alinean al comeimzo respecto a la selda
+        	-end: los elementos se alinean al final respecto a la selda
+        	-center: los elementos se centran respecto a la selda
+        	-stretch (default): ocupa toda la selda.
+
+    		-place-items: Engloba las propiedades justify-items y align-items
+      		-place-items: align-items justify-items (primero va align luego separado por un espacios va justify)
+	--------------------------------------------------------------------------------------------------------------------
+    	justify-content: Alinea los elementos horizontalmente respecto al contenedor
+    	align-content: Alinea los elementos verticalmente respecto al contenedor
+
+    	    Admiten los valores:
+        	-start
+        	-end
+        	-center
+        	-stretch (default)
+        	--space-around
+        	--space-between
+        	--space-evenly
+
+    		place-content: align-content justify-content
+	--------------------------------------------------------------------------------------------------------------------------------
+    	Tenemos las mismas propiedades con self para los items:
+        	+justify-self
+        	+align-self
+        	+place-self
+
+              Admite los valores:  
+            	-start
+           	-end
+            	-center
+            	-stretch
+
+    order: Funciona igual que en flexbox, por defecto todos los items tienen order:0. serian pocisionamiento de las seldas 
+	----------------------------------------- ejemplo: --------------------------------------------------------------------------------
+	
+	grid-template-columns: repeat(3, 1fr);/* 2) achicar las seldas para ver justify-content*/
+    	/* justify-items: center; /*centreo horizontal respecto a cada selda */
+    	/* align-items: center; /*centreo vertical respecto a cada selda */
+    	/* place-items: center end; /* englova a los dos anteriores propiedades vertical  horisontal*/
+
+	/* justify-content: start; /* seldas a la isqueirda*/
+	/* justify-content: end; /* seldas a la derecha */
+	/* justify-content: center ; /* seldas centreado */
+	/* justify-content: space-around; /* seldas a la derecha */
+    	/* justify-content: space-evenly; /* 1) espacio en los contornos y las columnas ceparadas por igual*/
+	/* justify-content: space-between/* sin espacio en los contornos y las columnas ceparadas por igual*/
+    	/* align-content: space-evenly; /* lo relaiza todo lo mismo q justify pero en forma vertical*/
+    	/* place-content: center end; /* hace los mimos q align(vertical) justify(horizontal) */
+	/* align-self: stretch; /*ocupa todo el selda  disponible en la fila*/
+    	/* justify-self: stretch; /*ocupa todo el selda  disponible en la columna */
+    	/* place-self: start end;  /*ocupa todo el selda  disponible en ambas */
+	/* order: -1;/*pocisionamiento de las celdas /**/
+6) ----------------------------------------areas ------------------------------------------------------------------------------------------------------
+	La propiedad grid-template-areas especifica el áreas dentro del diseño de la cuadrícula.
+		 Puede nombrar elementos de cuadrícula utilizando la propiedad class y 
+		 luego hacer referencia.		
+	grid-template-areas:
+        	" aside header  header "
+       	 	" aside article article "
+        	" aside footer  section "
+7) ---------------------------------------- refrencia ------------------------------------------------------------------------------------------------------
+	
+grid-template-columns:100px 200px 300px 400px	/*esto es similar a lo otro de abajo */
+
+	grid-template-columns: 
+        	[first-column-line]
+        	100px
+        	[second-column-line]
+        	200px
+        	[third-column-line]
+        	300px
+        	[fourth-column-line]
+        	400px
+        	[last-column-line];
+    	grid-template-rows:
+        	[first-row-line]
+        	100px
+        	[second-row-line]
+        	200px
+        	[third-row-line]
+        	300px
+        	[fourth-row-line]
+        	400px
+        	[last-row-line];
+
+	grid-column: second-column-line / third-column-line;  /* es lo mismo 200px / 300px. No simpre puedo usar esos nombres, se usa como referencia */
+
+9) -------------------------------------------------- Shorthands --------------------------------------------------------------------------------------------
+   Shorthands
+        grid: (sin soporte total) 
+            https://developer.mozilla.org/es/docs/Web/CSS/grid
+
+        *grid-template: 	Engloba grid-template-columns / grid-template-rows => grid-template-areas
+        *grid-gap:	Engloba grid-column-gap y grid-row-gap
+        *grid-column:    Engloba grid-column-start y grid-column-end
+        *grid-row:       Engloba grid-row-start y grid-row-end
+	grid track:      union de celdas consecutivas(uno a lado de otro), se puede formar de la manera vertical u horisontal
+ 	grid-template: /* fila / columna*/
+         	"first first first" 100px 	/* f1 */
+        	"center center center" 200px	/* f2 */
+        	"last . ." 150px 		/* f3 */
+		/300px 250px			/* C1 C2 */
+        	; 
+        /* grid:
+            "first first first" 100px
+            "center center center" 200px
+            "last . ." 150px /
+            300px 250px; */
+
+grid track: union de celdas consecutivas
+	.grid-item:first-child,  /* primera selda*/
+	.grid-item:nth-child(4), /* segunda selda*/
+	.grid-item:nth-child(7){ /* trersera selda*/
+   		 background-color: limegreen;
+	}
+----------------------------------------------------------------------------------------------------------------------------------------------
+    	

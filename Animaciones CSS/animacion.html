@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .container {
+            width: 150px;
+            height: 150px;
+            border: 1px solid red;
+            background-color: blue;
+            transition: 1.5s; /* la traccicion se da cudo se hace el hover y vuelve*/
+        }
+        
+        .container:hover {
+            transform: scale(2);  /* cambia la escala  de 1 a 2 */
+            transform: rotate(280deg);/* rota 280°*/
+            transform: rotateY(380deg); /* gira sobre el eje Y 180°*/
+
+            transform: translate(180px); /*  por defaul de traslada de manra horizontal + */
+            transform: translateX(180px);/* se traslada en el eje X*/
+            transform: translateY(180px); /* se traslada en el eje Y*/
+
+            transform: scale(3) rotate(500deg) translateY(180px);
+
+            -webkit-box-shadow: 63px 51px 17px -8px rgba(0,0,0,0.75);
+            -moz-box-shadow: 63px 51px 17px -8px rgba(0,0,0,0.75);
+            box-shadow: 63px 51px 17px -8px rgba(0,0,0,0.75);
+       
+        }
+    </style>
+    <title>Document</title>
+
+</head>
+
+<body>
+    <a href="https://fonts.google.com/specimen/Lobster?preview.size=30&preview.text=Fortaleza&preview.text_type=custom&sidebar.open=true&selection.family=Lobster"> fuentes</a>
+    <a href="https://www.enriquejros.com/efectos-imagenes-css/"> Efectos Ejemplos</a>
+    <a href="https://www.cssmatic.com/es/box-shadow "> Desgradado</a>
+    <a href="https://bennettfeely.com/clippy/"> clip- parth</a>
+    <div class="container">
+        hola mundo
+    </div>
+</body>
+
+</html>

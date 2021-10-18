@@ -1,0 +1,55 @@
+/*
+Se utilizan para dar estilo a partes específicas de un elemento.
+La sintaxis es selector::pseudo-element{ estilos }
+
+Existen 5 pseudoelementos:
+    ::first-letter (Elementos de bloque)
+    ::first-line (Elementos de bloque)
+    ::selection (Retirado de la especificación)
+    
+    ::before
+    ::after
+        La propiedad content es obligatoria
+        Son elementos de línea por defecto
+        Son hijos del elemento al que pertenecen
+
+*/
+
+    .title::first-letter{/*aca afecta a la primera LETRA del bloque*/
+        color: red;
+        font-size: 2em;
+    }
+
+    .text::first-line{/*aca afecta a la primera LINEA del bloque*/
+        font-size: 2em;
+        color:blue;
+        background: yellow;
+    }
+     .inline::selection{/*aca afecta al parrafo, cuando marcamos o seleccionas con el maus el parrafo*/
+        color: red; /*color de letra al seleccionar*/
+        background: blue; /*color de borde al selccionar*/
+
+    }
+     /* before, after(son elementos en linea): loq hace es añadir contenidos pero de forma virtul y se pueda visializar,
+         pero no se encuentra dentro del bloque sino q esta en hay x ensima.*/
+    .dolar::before{/*before(antes de): crea un pseudo-elemento que es el primer hijo del elemento seleccionado. 
+        Es usado normalmente para añadir contenido estético a un elemento, usando la propiedad content. */
+        content: " antes del dolar $ "; 
+        color: red;
+
+    }
+    .dolar::after{/*after(despues de):lo mismo q before.*/
+        content: " despues del dolar .00";
+        color: red;
+    } 
+
+    .comer::before, .comer::after{/*en este caso al tener asi, los pisa al anterior y es por eso q no anterior no si visualiza*/
+        content: ' antes_despues_de_comer:)';
+        display: block;/*como es elemento en linea, lo combierto en bloques.*/
+            width: 20px;
+            height: 20px;
+            background: red;
+    }
+
+
+

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es" dir="auto">
+<head>
+	<title> atributos </title>
+</head>
+<style >
+	li[data-user="user"]{
+		color:red;
+	}
+	li[data-user="admin"]{
+		color: blue;
+	}
+</style>
+<body>
+	<nav role="navegador-pricipal">
+		<ul onclick="alert('hola');">
+			<li data-user="user" data-user-age="24" >iten1</li>
+			<li data-user="admin">iten2</li>
+			<li data-user="hagui">iten3</li>
+			<li data-user="user">iten4</li>
+		</ul>
+	</nav>
+	<input type="text" name="">
+	<main role="navegacion-principal">	
+		<img src="imagen\atributo.jpg" width="100%">
+		<p class="parrafo" id="">hola que tal como estas.</p> <!---->
+		<!-- class: solo sirve para css, ID: sirve para css y javaScrip-->
+		<!-- role: sirve para mejorar la accesibilidad de los sitios web. permite al creador de una página añadir información a sus documentos HTML que luego puede ser extraída automáticamente por una máquina para obtener información sobre el propósito de cada elemento de la página.-->
+		<!-- dir:  auto= busca el navegador en q idioma debe estar. ltr= escritura de isquierda a derecha. rtl= la escritura contraria. -->
+		<!-- data: es similar a una class. q sirve para acceser desde css y javascripcon la condicion de poder modificar tanto el texto o el numero etc..
+			haguilerts.online
+			haguilerts.online
+			Vence el 2024-06-19		-->
+	</main>
+	
+
+</body>
+</html>
+
